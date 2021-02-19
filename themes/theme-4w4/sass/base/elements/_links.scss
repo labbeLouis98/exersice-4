@@ -20,3 +20,59 @@ a {
 		outline: 0;
 	}
 }
+
+.main-navigation {
+	a {
+		color: $color__linkmenu;
+		margin-left: 3rem;
+
+		/*&:visited {
+			color: $color__linkmenu-visited;
+		}
+		*/
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__linkmenu-hover;
+		}
+
+		&:focus {
+			outline: thin dotted;
+		}
+
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+	}
+
+} //.main-navigation
+
+
+.site-title {
+	a {
+		color: $color__linktitle;
+		/*margin-left: 3rem;*/
+
+		&:visited {
+			color: $color__linktitle-visited;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__linktitle-hover;
+		}
+
+		&:focus {
+			outline: thin dotted;
+		}
+
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+	}
+
+} //.site-title
