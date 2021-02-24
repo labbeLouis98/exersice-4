@@ -7,7 +7,7 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background-color: rgb(167, 48, 77);
+		background-color: rgb(85, 85, 218);
 		position: absolute;
 		width: 100%;
 
@@ -130,6 +130,7 @@ Version Tablette
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			font-size: clamp(1rem, #{"-0.875rem + 4.333vw"}, 2rem);
 			
 		}
 
