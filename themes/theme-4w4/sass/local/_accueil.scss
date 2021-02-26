@@ -10,6 +10,10 @@
       
 }
 
+#primary{
+    width: 100vw;
+}
+
 .site-description {
     font-family: $font__title;
     font-size:  clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
@@ -24,11 +28,16 @@
     ul{
         list-style-type: none;
         font-size: clamp(.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
+        justify-content: center;
+        align-items: center;
     }
 
     img{
 
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         border-radius: 30%;
         place-items: center;
     }

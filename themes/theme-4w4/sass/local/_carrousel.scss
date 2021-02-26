@@ -47,37 +47,56 @@
 /*-------------couleur des boutons 1 3 4 --------------------*/
 /*-----------------------------------------------------------*/
 
+
+/*-------------Ajout de la section et de la class boutons-----------------*/
 .boutons {
 
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    
-    
+    display: flex; // flex box la section
+    justify-content: center; // centrage de la section
+    align-items: center;
+    width: 100vw; // largeur fixe de 100vw pour occuper 100% de la page accueil sans deborder dans les 300vw 
+    background-color: white;
+
+    :nth-child(1),
+    :nth-child(2),
+    :nth-child(3) {
+
+        border-radius: 20%;
+        font-size: clamp(0.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
+        border: 4px solid white;
+
+    }
+    :nth-child(1):hover,
+    :nth-child(2):hover,
+    :nth-child(3):hover {
+
+        border-radius: 50%;
+       
+        
+
+    }
 
 }
 
 #un {
 
     background-color: rgb(252, 111, 221);
-    font-size: clamp(0.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
-    
-    border: 4px solid white;
-    border-radius: 15%;
+
+
 }
 
 #deux {
     background-color: rgb(151, 252, 111);
-    font-size: clamp(0.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
-    
-    border: 4px solid white;
-    border-radius: 15%;
+
+
+
+
 }
 
 #trois {
     background-color: rgb(111, 167, 252);
-    font-size: clamp(0.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
-    
-    border: 4px solid white;
-    border-radius: 15%;
+
+
+
+
 }

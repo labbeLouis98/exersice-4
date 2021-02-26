@@ -114,6 +114,8 @@ Version Tablette
 -------------------------------------------------------------------- */
 @media screen and (min-width: 37.5em) {
 
+	
+
 	.menu-toggle {
 		display: none;
 	}
@@ -126,12 +128,17 @@ Version Tablette
 		position: static;
 		width: 100vw;
 
+
+		/*---------------------------------------------------------------------------------------------------------*/
+		/*diminution du with des a dans le nav ul pour reduire le depassement des a dans son conteneur de 100vw --*/
+		/*----------utilisation du clamp en changeant la valeur du with vw du clamp sur les a du nav-------------- */
+		/*---------------------------------------------------------------------------------------------------------*/
 		a {
+			width: 15%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			font-size: clamp(1rem, #{"-0.875rem + 4.333vw"}, 2rem);
-			
+			font-size: clamp(1rem, #{"-0.875rem + 3.333vw"}, 1.8rem);
 		}
 
 	}

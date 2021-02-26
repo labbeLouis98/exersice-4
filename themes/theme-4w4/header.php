@@ -55,8 +55,8 @@
 		</section>
 
 		<section class="boutons">
-		<button id='un'>1</button>
-		<button id='deux'>2</button>
+		<button id='un'   >1</button>
+		<button id='deux' >2</button>
 		<button id='trois'>3</button>
 		</section>
 		<?php endif ?>
