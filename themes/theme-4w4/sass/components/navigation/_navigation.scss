@@ -114,8 +114,6 @@ Version Tablette
 -------------------------------------------------------------------- */
 @media screen and (min-width: 37.5em) {
 
-	
-
 	.menu-toggle {
 		display: none;
 	}
@@ -130,11 +128,11 @@ Version Tablette
 
 
 		/*---------------------------------------------------------------------------------------------------------*/
-		/*diminution du with des a dans le nav ul pour reduire le depassement des a dans son conteneur de 100vw --*/
+		/*diminution du margin des a dans le nav ul pour reduire le depassement des a dans son conteneur de 100vw --*/
 		/*----------utilisation du clamp en changeant la valeur du with vw du clamp sur les a du nav-------------- */
 		/*---------------------------------------------------------------------------------------------------------*/
 		a {
-			width: 15%;
+			margin: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;

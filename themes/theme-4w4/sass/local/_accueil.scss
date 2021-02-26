@@ -1,38 +1,46 @@
 .site-title {
     font-family: $font__title;
-    font-size:  clamp(2rem, #{"-0.875rem + 8.333vw"}, 4rem);
+    font-size: clamp(2rem, #{"-0.875rem + 8.333vw"}, 4rem);
     font-weight: bold;
-    
-    margin-bottom:0 ;
-    a{
+
+    margin-bottom: 0;
+
+    a {
         text-decoration: none;
     }
-      
+
 }
 
-#primary{
+#primary {
     width: 100vw;
+
 }
 
 .site-description {
     font-family: $font__title;
-    font-size:  clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
+    font-size: clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
     font-weight: normal;
-      
-      margin-top:0 ;
+
+    margin-top: 0;
 }
 
-.accueil{
+.accueil {
 
- 
-    ul{
+
+    ul {
         list-style-type: none;
         font-size: clamp(.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
         justify-content: center;
         align-items: center;
     }
 
-    img{
+    li {
+        font-size: clamp(1rem, #{"-0.875rem + 3.333vw"}, 1.8rem);
+        display: flex;
+        justify-content: left;
+    }
+
+    img {
 
         display: flex;
         justify-content: center;
@@ -41,16 +49,16 @@
         border-radius: 30%;
         place-items: center;
     }
-    
+
 }
 
-body.home{
-    
+body.home {
+
     height: 100vh;
     width: 100vw;
 }
 
-body.home::after{
+body.home::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -58,11 +66,12 @@ body.home::after{
     top: 0;
     bottom: 0;
     left: 0;
-    right:0;
-    @include tablette{
+    right: 0;
+
+    @include tablette {
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
         background-color: rgba(85, 85, 218, 0.678)
     }
-  z-index: -1;
-}
 
+    z-index: -1;
+}

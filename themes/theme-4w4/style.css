@@ -688,8 +688,8 @@ body {
 
 */
 .site-branding, #primary, #colophon {
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 /*--------------------------------------------------------------
@@ -801,12 +801,12 @@ Version Tablette
     position: static;
     width: 100vw;
     /*---------------------------------------------------------------------------------------------------------*/
-    /*diminution du with des a dans le nav ul pour reduire le depassement des a dans son conteneur de 100vw --*/
+    /*diminution du margin des a dans le nav ul pour reduire le depassement des a dans son conteneur de 100vw --*/
     /*----------utilisation du clamp en changeant la valeur du with vw du clamp sur les a du nav-------------- */
     /*---------------------------------------------------------------------------------------------------------*/
   }
   .main-navigation ul a {
-    width: 15%;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1087,6 +1087,12 @@ Version Tablette
   font-size: clamp(0.5rem, -0.875rem + 8.333vw, 2rem);
   justify-content: center;
   align-items: center;
+}
+
+.accueil li {
+  font-size: clamp(1rem, -0.875rem + 3.333vw, 1.8rem);
+  display: flex;
+  justify-content: left;
 }
 
 .accueil img {
