@@ -787,11 +787,12 @@ Version Tablette
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
+    width: 100vw;
   }
   .main-navigation ul {
     display: flex;
     height: 4rem;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: static;
     width: 100vw;
@@ -801,7 +802,7 @@ Version Tablette
     /*---------------------------------------------------------------------------------------------------------*/
   }
   .main-navigation ul a {
-    margin: 0;
+    margin-right: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1068,7 +1069,7 @@ Version Tablette
 
 #primary {
   width: 100vw;
-  margin-left: 0;
+  margin-left: 3rem;
 }
 
 .site-description {

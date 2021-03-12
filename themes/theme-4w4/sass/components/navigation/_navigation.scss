@@ -108,12 +108,15 @@ Version Tablette
 
 	.menu-toggle {
 		display: none;
+		width: 100vw;
+		
 	}
 
 	.main-navigation ul {
+		
 		display: flex;
 		height: 4rem;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 		position: static;
 		width: 100vw;
@@ -124,7 +127,9 @@ Version Tablette
 		/*----------utilisation du clamp en changeant la valeur du with vw du clamp sur les a du nav-------------- */
 		/*---------------------------------------------------------------------------------------------------------*/
 		a {
-			margin: 0;
+			
+		margin-right: 3rem;
+			//margin: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
