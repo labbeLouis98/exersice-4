@@ -1,0 +1,193 @@
+.main-navigation {
+	display: block;
+	width: 100vw;
+	
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		background-color: rgb(85, 85, 218);
+		position: absolute;
+		width: 100%;
+
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover>ul,
+				&.focus>ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+
+			}
+
+			:hover>a,
+			.focus>a {}
+
+			a:hover,
+			a.focus {}
+		}
+
+		li:hover>ul,
+		li.focus>ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover>a,
+		&.focus>a {}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item>a,
+	.current-menu-item>a,
+	.current_page_ancestor>a,
+	.current-menu-ancestor>a {}
+}
+
+/* ----------------------------------------------------------------
+Bouton burger
+-------------------------------------------------------------------
+ */
+.menu-toggle {
+	padding: 0rem;
+	border: 0;
+	margin-left: 3rem;
+	background-color: #fff;
+
+}
+
+
+.menu-toggle:focus {
+	outline: 1px soldid #fff;
+	outline-offset: -4px;
+}
+
+.menu-toggle:active {
+	transform: scale(0.99);
+
+}
+
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	li{
+		a {
+			&[href="#"]::after {
+				position: absolute;
+				content: "\2B9E";
+				width: 100%;
+				height: 100%;
+				top: 25%;
+				bottom: 0;
+				left: 95%;
+				right: 0;
+				
+
+			}
+		}
+
+
+	}
+
+	li.focus{
+		a {
+			&[href="#"]::after {
+				content: "\2B9F";
+				
+
+			}
+		}
+
+
+	}
+
+}
+
+/* -----------------------------------------------------------------
+Version Tablette
+-------------------------------------------------------------------- */
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+		width: 100vw;
+		
+	}
+
+	.main-navigation ul {
+		
+		display: flex;
+		height: 4rem;
+		justify-content: space-between;
+		align-items: center;
+		position: static;
+		width: 100vw;
+
+
+		/*---------------------------------------------------------------------------------------------------------*/
+		/*diminution du margin des a dans le nav ul pour reduire le depassement des a dans son conteneur de 100vw --*/
+		/*----------utilisation du clamp en changeant la valeur du with vw du clamp sur les a du nav-------------- */
+		/*---------------------------------------------------------------------------------------------------------*/
+		a {
+			
+		margin-right: 3rem;
+			//margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: clamp(1rem, #{"-0.875rem + 3.333vw"}, 1.8rem);
+		}
+
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}

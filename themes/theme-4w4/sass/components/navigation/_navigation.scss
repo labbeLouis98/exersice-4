@@ -5,19 +5,21 @@
 
 	ul {
 		display: none;
+		position : absolute;
+		width : 100%;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background-color: rgb(85, 85, 218);
-		position: absolute;
-		width: 100%;
-
+		background-color: #000;
+	
+	
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
 			top: 100%;
+			
 			left: -999em;
 			z-index: 99999;
 
@@ -26,116 +28,111 @@
 				top: 0;
 			}
 
+
 			li {
 
-				&:hover>ul,
-				&.focus>ul {
+				&:hover > ul,
+				&.focus > ul {
 					display: block;
 					left: auto;
 				}
 			}
 
+
 			a {
 				width: 200px;
-
 			}
 
-			:hover>a,
-			.focus>a {}
+
+			:hover > a,
+			.focus > a {
+			}
 
 			a:hover,
-			a.focus {}
+			a.focus {
+			}
+			
 		}
 
-		li:hover>ul,
-		li.focus>ul {
-			left: auto;
+		li:hover > ul,
+		li.focus > ul {
+			left: 0;
+		
 		}
+
+
 	}
 
 	li {
 		position: relative;
+	 flex : 1;
 
-		&:hover>a,
-		&.focus>a {}
+		&:hover > a,
+		&.focus > a {
+		}
+	
+
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		padding: .5rem;
 	}
 
-	.current_page_item>a,
-	.current-menu-item>a,
-	.current_page_ancestor>a,
-	.current-menu-ancestor>a {}
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
 }
-
-/* ----------------------------------------------------------------
-Bouton burger
--------------------------------------------------------------------
- */
+/* -----------------------------------------------------------------------------
+Bouton burger 
+------------------------------------------------------------------------------*/
 .menu-toggle {
-	padding: 0rem;
-	border: 0;
-	margin-left: 3rem;
-	background-color: #fff;
-
+	padding :0;
+//	transition : transform .25s;
+//	transform : rotate(0deg);
+	border : 0;
 }
-
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background: #fafbfc;
+}
 
 .menu-toggle:focus {
-	outline: 1px soldid #fff;
-	outline-offset: -4px;
+    outline: 1px solid #fff;
+    outline-offset: -4px;
 }
 
 .menu-toggle:active {
-	transform: scale(0.99);
-
+    transform: scale(0.99);
 }
 
+/*
+.main-navigation.toggled .menu-toggle{
+	transform : rotate(90deg);
+}
+*/
 
-/* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
-
-/* -----------------------------------------------------------------
-Version Tablette
--------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------
+menu tablet
+------------------------------------------------------------------------------ */
 @media screen and (min-width: 37.5em) {
 
 	.menu-toggle {
 		display: none;
-		width: 100vw;
-		
 	}
-
+	.main-navigation.toggled ul,
 	.main-navigation ul {
-		
 		display: flex;
-		height: 4rem;
-		justify-content: space-between;
-		align-items: center;
-		position: static;
-		width: 100vw;
-
-
-		/*---------------------------------------------------------------------------------------------------------*/
-		/*diminution du margin des a dans le nav ul pour reduire le depassement des a dans son conteneur de 100vw --*/
-		/*----------utilisation du clamp en changeant la valeur du with vw du clamp sur les a du nav-------------- */
-		/*---------------------------------------------------------------------------------------------------------*/
-		a {
-			
-		margin-right: 3rem;
-			//margin: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: clamp(1rem, #{"-0.875rem + 3.333vw"}, 1.8rem);
-		}
-
+		position : static;
+		justify-content: space-around;
+		
 	}
 }
 

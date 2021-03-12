@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-///////////////////////////////////////////////////////// CATEGORY-COURS.PHP
+<!-- ///////////////////////////////////////////////////////// CATEGORY-COURS.PHP -->
 <main id="primary" class="site-main">
 
     <?php if ( have_posts() ) : ?>
@@ -28,19 +28,22 @@ get_header();
 				the_post();
                 $titre = get_the_title();
                 $session = substr($titre, 4,1);
+                $contenu = get_the_content();
+                $resume = substr($contenu, 0,200);
                 
 
                 ?>
     <?php
                 if ($session != $precedent){
-                    echo "<p>Session : " . $session . "</p>"; 
+                    echo "<p>Session : " . $session . " - ". "Optionnel". "</p>"; 
                 }
                 $precedent = $session;
                 ?>
                 
 
     <p> <?php echo $session . " - " . $titre; ?> </p>
-
+    <p> <?php echo $resume; ?> </p> 
+    
     <?php
 
 			endwhile;
