@@ -62,37 +62,32 @@
         border-radius: 20%;
         font-size: clamp(0.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
         border: 4px solid white;
+        width: 6rem;
+        height: 5rem;
 
     }
-    :nth-child(1):hover,
-    :nth-child(2):hover,
-    :nth-child(3):hover {
+    :nth-child(1):focus,
+    :nth-child(2):focus,
+    :nth-child(3):focus{
 
         border-radius: 50%;
+        
 
     }
 
 }
 
 #un {
-
     background-color: rgb(252, 111, 221);
-
-
+    
 }
 
 #deux {
     background-color: rgb(151, 252, 111);
-
-
-
-
+    
 }
 
 #trois {
     background-color: rgb(111, 167, 252);
-
-
-
-
+    
 }

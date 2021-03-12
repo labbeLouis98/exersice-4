@@ -35,7 +35,7 @@ get_header();
                 ?>
     <?php
                 if ($session != $precedent){
-                    echo "<p>Session : " . $session . " - ". "Optionnel". "</p>"; 
+                    echo "<p>Session : " . $session; "</p>"; 
                 }
                 $precedent = $session;
                 ?>

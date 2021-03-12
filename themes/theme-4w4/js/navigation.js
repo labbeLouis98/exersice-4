@@ -57,16 +57,17 @@
 
 	// Get all the link elements with children within the menu.
 	const linksWithChildren = menu.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
-
+/*
 	// Toggle focus each time a menu link is focused or blurred.
 	for ( const link of links ) {
 		link.addEventListener( 'focus', toggleFocus, true );
 		link.addEventListener( 'blur', toggleFocus, true );
 	}
-
+*/
 	// Toggle focus each time a menu link with children receive a touch event.
 	for ( const link of linksWithChildren ) {
 		link.addEventListener( 'touchstart', toggleFocus, false );
+		link.addEventListener( 'mousedown', toggleFocus, false );
 	
 	}
 
@@ -86,7 +87,7 @@
 			}
 		}
 
-		if ( event.type === 'touchstart') {
+		if ( event.type === 'touchstart' || event.type === 'mousedown' ) {
 			const menuItem = this.parentNode;
 			event.preventDefault();
 			for ( const link of menuItem.parentNode.children ) {
