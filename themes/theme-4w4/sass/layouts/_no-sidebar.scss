@@ -32,6 +32,18 @@ body{
 */
 
 .site-branding, #primary, #colophon {
-	margin-left: 2rem;
-	margin-right: 2rem;
+	margin-left: .5rem;
+	//margin-right: 2rem;
+
+	@include tablette{
+		margin-left: 2rem;
+	}
 }
+
+/*
+#primary{
+	display: flex;
+	//justify-content: center
+}
+
+*/

@@ -1,6 +1,7 @@
 .main-navigation {
 	display: block;
-	width: 100%;
+	width: 100vw;
+	
 
 	ul {
 		display: none;
@@ -78,15 +79,10 @@ Bouton burger
 	padding: 0rem;
 	border: 0;
 	margin-left: 3rem;
-	transition: transform .20s;
-	transform: rotate(0);
+	background-color: #fff;
 
 }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
-	background: rgb(199, 223, 255);
-}
 
 .menu-toggle:focus {
 	outline: 1px soldid #fff;
@@ -98,10 +94,6 @@ Bouton burger
 
 }
 
-.main-navigation.toggled .menu-toggle {
-
-	transform: rotate(90deg);
-}
 
 /* Small menu. */
 .menu-toggle,

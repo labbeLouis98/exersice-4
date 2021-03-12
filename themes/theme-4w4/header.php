@@ -12,6 +12,7 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,52 +22,68 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'theme-4w4' ); ?></a>
+	<?php wp_body_open(); ?>
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text"
+			href="#primary"><?php esc_html_e( 'Skip to content', 'theme-4w4' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
+		<header id="masthead" class="site-header">
+			<div class="site-branding">
+				<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+						rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+						rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
 			$theme_4w4_description = get_bloginfo( 'description', 'display' );
 			if ( $theme_4w4_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $theme_4w4_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+				<p class="site-description">
+					<?php echo $theme_4w4_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				</p>
+				<?php endif; ?>
+			</div><!-- .site-branding -->
 
-		<!-- debut du carrousel-->
+			<!-- debut du carrousel-->
 
-		<?php if ( is_front_page()) : ?>
-		<section class="carrousel">
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
-		</section>
+			<?php if ( is_front_page()) : ?>
+			<section class="carrousel">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+			</section>
 
-		<section class="boutons">
-		<button id='un'   >1</button>
-		<button id='deux' >2</button>
-		<button id='trois'>3</button>
-		</section>
-		<?php endif ?>
-		<!-- fin du carrousel-->
-		
+			<section class="boutons">
+				<button id='un'>1</button>
+				<button id='deux'>2</button>
+				<button id='trois'>3</button>
+			</section>
+			<?php endif ?>
+			<!-- fin du carrousel-->
 
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32"></button>
-			<?php
+
+			<nav id="site-navigation" class="main-navigation">
+				<button  class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<!--<img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">-->
+					<section id="burger">
+
+					<div></div>
+					<div></div>
+					<div></div>
+
+			</section>
+
+
+			</button>
+				<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
@@ -74,5 +91,5 @@
 				)
 			);
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+			</nav><!-- #site-navigation -->
+		</header><!-- #masthead -->
