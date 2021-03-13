@@ -725,7 +725,7 @@ body {
 }
 
 .main-navigation ul ul li a {
-  padding-left: 20px;
+  padding-left: 12px;
 }
 
 .main-navigation ul ul a {
@@ -842,7 +842,7 @@ menu tablet
   }
   .main-navigation.toggled ul a,
   .main-navigation ul a {
-    font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1.4rem);
+    font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1.2rem);
     display: flex;
     justify-content: left;
     align-items: center;

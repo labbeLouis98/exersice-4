@@ -581,36 +581,29 @@ a:hover, a:active {
 
 /* Forms
 --------------------------------------------- */
+/*
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  line-height: 1;
-  padding: 0.6em 1em 0.4em;
-}
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
-}
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
 
-button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-  border-color: #aaa #bbb #bbb;
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
 }
-
+*/
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -688,10 +681,16 @@ body {
 
 */
 .site-branding, #primary, #colophon {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: .5rem;
 }
 
+/*
+#primary{
+	display: flex;
+	//justify-content: center
+}
+
+*/
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -699,17 +698,20 @@ body {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100%;
+  width: 100vw;
 }
 
 .main-navigation ul {
   display: none;
+  position: absolute;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: #5555da;
-  position: absolute;
-  width: 100%;
+  background-color: #1a71d4;
+  text-align: left;
+  justify-content: left;
+  /* fin sub menu */
 }
 
 .main-navigation ul ul {
@@ -717,58 +719,57 @@ body {
   float: left;
   position: absolute;
   top: 100%;
+  transition: left .2s;
   left: -999em;
   z-index: 99999;
 }
 
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  display: block;
-  left: auto;
+.main-navigation ul ul li a {
+  padding-left: 12px;
 }
 
 .main-navigation ul ul a {
-  width: 200px;
+  width: 100%;
+  margin: 0;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: auto;
+  left: 0;
 }
 
-.main-navigation li {
+.main-navigation ul li {
   position: relative;
+  flex: 1;
+  /*
+	
+			&:hover > a,
+			&.focus > a {
+			}
+		*/
 }
 
 .main-navigation a {
   display: block;
   text-decoration: none;
+  padding: .5rem;
 }
 
-/* ----------------------------------------------------------------
-Bouton burger
--------------------------------------------------------------------
- */
+/* -----------------------------------------------------------------------------
+Bouton burger 
+------------------------------------------------------------------------------*/
 .menu-toggle {
-  padding: 0rem;
+  padding: 0;
   border: 0;
-  margin-left: 3rem;
-  transition: transform .20s;
-  transform: rotate(0);
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  background: #c7dfff;
+  background: #fafbfc;
 }
 
 .menu-toggle:focus {
-  outline: 1px soldid #fff;
+  outline: 1px solid #fff;
   outline-offset: -4px;
 }
 
@@ -776,8 +777,9 @@ Bouton burger
   transform: scale(0.99);
 }
 
-.main-navigation.toggled .menu-toggle {
-  transform: rotate(90deg);
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
 }
 
 /* Small menu. */
@@ -786,31 +788,64 @@ Bouton burger
   display: block;
 }
 
-/* -----------------------------------------------------------------
-Version Tablette
--------------------------------------------------------------------- */
+.menu-toggle li a[href="#"]::after,
+.main-navigation.toggled ul li a[href="#"]::after {
+  position: absolute;
+  content: "\2B9E";
+  width: 100%;
+  height: 100%;
+  top: 25%;
+  bottom: 0;
+  left: 95%;
+  right: 0;
+}
+
+.menu-toggle li.focus a[href="#"]::after,
+.main-navigation.toggled ul li.focus a[href="#"]::after {
+  content: "\2B9F";
+}
+
+/* ---------------------------------------------------------------------------
+menu tablet
+------------------------------------------------------------------------------ */
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
   }
+  .main-navigation.toggled ul,
   .main-navigation ul {
     display: flex;
-    height: 4rem;
+    position: static;
     justify-content: space-around;
     align-items: center;
     position: static;
     width: 100vw;
-    /*---------------------------------------------------------------------------------------------------------*/
-    /*diminution du margin des a dans le nav ul pour reduire le depassement des a dans son conteneur de 100vw --*/
-    /*----------utilisation du clamp en changeant la valeur du with vw du clamp sur les a du nav-------------- */
-    /*---------------------------------------------------------------------------------------------------------*/
   }
+  .main-navigation.toggled ul a[href="#"]::after,
+  .main-navigation ul a[href="#"]::after {
+    content: "\2B9E";
+  }
+  .main-navigation.toggled ul li:hover a[href="#"]::after,
+  .main-navigation ul li:hover a[href="#"]::after {
+    content: "\2B9F";
+  }
+  .main-navigation.toggled ul li:hover ul,
+  .main-navigation ul li:hover ul {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 650px;
+  }
+  .main-navigation.toggled ul ul,
+  .main-navigation ul ul {
+    display: none;
+  }
+  .main-navigation.toggled ul a,
   .main-navigation ul a {
-    margin: 0;
+    font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1.2rem);
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    font-size: clamp(1rem, -0.875rem + 3.333vw, 1.8rem);
   }
 }
 
@@ -1073,6 +1108,7 @@ Version Tablette
 
 #primary {
   width: 100vw;
+  margin-left: 3rem;
 }
 
 .site-description {
@@ -1085,7 +1121,6 @@ Version Tablette
 .accueil ul {
   list-style-type: none;
   font-size: clamp(0.5rem, -0.875rem + 8.333vw, 2rem);
-  justify-content: center;
   align-items: center;
 }
 
@@ -1112,7 +1147,7 @@ body.home::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 200%;
+  height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1123,7 +1158,6 @@ body.home::after {
 @media (min-width: 800px) {
   body.home::after {
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
-    background-color: rgba(85, 85, 218, 0.678);
   }
 }
 
@@ -1176,11 +1210,13 @@ body.home::after {
   border-radius: 20%;
   font-size: clamp(0.5rem, -0.875rem + 8.333vw, 2rem);
   border: 4px solid white;
+  width: 6rem;
+  height: 5rem;
 }
 
-.boutons :nth-child(1):hover,
-.boutons :nth-child(2):hover,
-.boutons :nth-child(3):hover {
+.boutons :nth-child(1):focus,
+.boutons :nth-child(2):focus,
+.boutons :nth-child(3):focus {
   border-radius: 50%;
 }
 
@@ -1194,5 +1230,129 @@ body.home::after {
 
 #trois {
   background-color: #6fa7fc;
+}
+
+/* Local/burger
+--------------------------------------------- */
+/*-------------------------------------------------
+Variables Sass
+--------------------------------------------------*/
+/* -------------------------------------------------
+Bouton burger
+----------------------------------------------------*/
+#burger {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#burger div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#burger div:nth-of-type(1) {
+  clip-path: polygon(0 15%, 100% 15%, 100% 27%, 0 27%);
+  background-color: aqua;
+}
+
+#burger div:nth-of-type(2) {
+  clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  background-color: #c8e717;
+}
+
+#burger div:nth-of-type(3) {
+  clip-path: polygon(0 75%, 100% 75%, 100% 87%, 0 87%);
+  background-color: #ff00c8;
+}
+
+/*-------------------------------------------------------------------
+Animation de la premiere barre bar1
+-------------------------------------------------------------------*/
+@keyframes ouvrirX1 {
+  0% {
+    clip-path: polygon(0 15%, 100% 15%, 100% 27%, 0 27%);
+  }
+  100% {
+    clip-path: polygon(7% -7%, 107% 93%, 93% 107%, -7% 7%);
+  }
+}
+
+@keyframes fermeX1 {
+  0% {
+    clip-path: polygon(7% -7%, 107% 93%, 93% 107%, -7% 7%);
+  }
+  100% {
+    clip-path: polygon(0 15%, 100% 15%, 100% 27%, 0 27%);
+  }
+}
+
+.ouvrirX1 {
+  animation: ouvrirX1 0.2s both;
+}
+
+.fermeX1 {
+  animation: fermeX1 0.2s both;
+}
+
+/*-------------------------------------------------------------------
+Animation de la deuxime barre bar2
+-------------------------------------------------------------------*/
+@keyframes ouvrirX2 {
+  0% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+  100% {
+    clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+  }
+}
+
+@keyframes fermeX2 {
+  0% {
+    clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+  }
+  100% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+}
+
+.ouvrirX2 {
+  animation: ouvrirX2 0.2s both;
+}
+
+.fermeX2 {
+  animation: fermeX2 0.2s both;
+}
+
+/*-------------------------------------------------------------------
+Animation de la deuxime barre bar3
+-------------------------------------------------------------------*/
+@keyframes ouvrirX3 {
+  0% {
+    clip-path: polygon(0 75%, 100% 75%, 100% 87%, 0 87%);
+  }
+  100% {
+    clip-path: polygon(-7% 93%, 93% -7%, 107% 7%, 7% 107%);
+  }
+}
+
+@keyframes fermeX3 {
+  0% {
+    clip-path: polygon(-7% 93%, 93% -7%, 107% 7%, 7% 107%);
+  }
+  100% {
+    clip-path: polygon(0 75%, 100% 75%, 100% 87%, 0 87%);
+  }
+}
+
+.ouvrirX3 {
+  animation: ouvrirX3 0.2s both;
+}
+
+.fermeX3 {
+  animation: fermeX3 0.2s both;
 }
 /*# sourceMappingURL=style.css.map */

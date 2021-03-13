@@ -28,7 +28,7 @@
 			li {
 				a {
 					
-					padding-left: 20px;
+					padding-left: 12px;
 				}
 			}
 
@@ -194,7 +194,7 @@ menu tablet
 
 		a {
 			//justify-content: left;
-			font-size: clamp(.8rem, #{"-0.875rem + 3.333vw"}, 1.4rem);
+			font-size: clamp(.8rem, #{"-0.875rem + 3.333vw"}, 1.2rem);
 			display: flex;
 			justify-content: left;
 			align-items: center;
