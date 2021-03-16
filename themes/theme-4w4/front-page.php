@@ -26,25 +26,8 @@ get_header();
             $precedent = 0;
 			while ( have_posts() ) :
 				the_post();
-                $titre = get_the_title();
-                $session = substr($titre, 4,1);
-                $contenu = get_the_content();
-                $resume = substr($contenu, 0,200);
+                $titre = get_the_title()
                 
-
-                ?>
-    <?php
-                if ($session != $precedent){
-                    echo "<p>Session : " . $session; "</p>"; 
-                }
-                $precedent = $session;
-                ?>
-                
-
-    <p> <?php echo $session . " - " . $titre; ?> </p>
-    <p> <?php echo $resume; ?> </p> 
-    
-    <?php
 
 			endwhile;
 
