@@ -24,7 +24,7 @@
 
     margin-top: 0;
 }
-
+ /*
 .accueil {
 
 
@@ -53,6 +53,8 @@
 
 }
 
+*/
+
 body.home {
 
     height: 100vh;
@@ -77,3 +79,54 @@ body.home::after {
 
     z-index: -1;
 }
+/*Site-main appellé : list-cours */
+//.site-main
+.list-cours{
+    display: flex;
+    flex-direction: column;
+
+    section{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        //align-items: center;
+        justify-content: space-between;
+
+        article{
+            
+            display: flex;
+            flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 90%; // ajuster le width pour  mobile
+
+        @include tablette{
+            justify-content: space-between;
+            width: 30%; // ajuster le width pour desktop
+
+        }
+         border: 1px solid black;
+         
+    
+         p{
+             font-size: .7rem;
+             font-weight: bold;
+             
+    
+         }
+    
+         a{
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+         }
+        } //fin article
+
+    }
+    
+     
+}
+
+
+/* media query */

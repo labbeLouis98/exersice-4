@@ -204,8 +204,9 @@ function extraire_cours_front_page($query){
 
 	$query->set( 'category_name', 'cours' );
 	$query->set('posts_per_page', -1 );
-	$query->set('orderby', 'title');
-	$query->set('order', 'asc');
+	$query->set('meta_key', 'type_de_cours');
+	$query->set('orderby', array('meta_value' => 'DESC', 'ttle' => 'ASC'));
+	$query->set('order', 'desc');
 }
 }
 add_action('pre_get_posts','extraire_cours_front_page');

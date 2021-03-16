@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: theme-4w4
 Theme URI: http://underscores.me/
@@ -1118,26 +1119,36 @@ menu tablet
   margin-top: 0;
 }
 
-.accueil ul {
-  list-style-type: none;
-  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 2rem);
-  align-items: center;
+/*
+.accueil {
+
+
+    ul {
+        list-style-type: none;
+        font-size: clamp(.5rem, -0.875rem + 8.333vw, 2rem);
+        
+        align-items: center;
+    }
+
+    li {
+        font-size: clamp(1rem, -0.875rem + 3.333vw, 1.8rem);
+        display: flex;
+        justify-content: left;
+    }
+
+    img {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 30%;
+        place-items: center;
+    }
+
 }
 
-.accueil li {
-  font-size: clamp(1rem, -0.875rem + 3.333vw, 1.8rem);
-  display: flex;
-  justify-content: left;
-}
-
-.accueil img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30%;
-  place-items: center;
-}
-
+*/
 body.home {
   height: 100vh;
   width: 100vw;
@@ -1161,6 +1172,47 @@ body.home::after {
   }
 }
 
+/*Site-main appellé : list-cours */
+.list-cours {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-cours section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-cours section article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border: 1px solid black;
+}
+
+@media (min-width: 800px) {
+  .list-cours section article {
+    justify-content: space-between;
+    width: 30%;
+  }
+}
+
+.list-cours section article p {
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.list-cours section article a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* media query */
 /* Local/carrousel
 --------------------------------------------- */
 .carrousel {
