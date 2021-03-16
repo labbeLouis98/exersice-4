@@ -1,14 +1,20 @@
+
+.list-cours{
+    
+
 .carrousel {
     display: flex;
     width: 300vw;
     height: 20vh;
     transition: transform .5s;
     justify-content: center;
+    
 
 
     //justify-content: center;
 
     div {
+        
 
         width: 100vw;
         display: flex;
@@ -47,47 +53,55 @@
 /*-----------------------------------------------------------*/
 
 /*-------------Ajout de la section et de la class boutons-----------------*/
-.boutons {
 
-    display: flex; // flex box la section
-    justify-content: center; // centrage de la section
-    align-items: center;
-    width: 100vw; // largeur fixe de 100vw pour occuper 100% de la page accueil sans deborder dans les 300vw 
-    background-color: white;
 
-    :nth-child(1),
-    :nth-child(2),
-    :nth-child(3) {
 
-        border-radius: 20%;
-        font-size: clamp(0.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
-        border: 4px solid white;
-        width: 6rem;
-        height: 5rem;
+    .boutons {
 
-    }
-    :nth-child(1):focus,
-    :nth-child(2):focus,
-    :nth-child(3):focus{
-
-        border-radius: 50%;
+        display: flex; // flex box la section
+        justify-content: center; // centrage de la section
+        align-items: center;
+        width: 100vw; // largeur fixe de 100vw pour occuper 100% de la page accueil sans deborder dans les 300vw 
+        background-color: rgb(62, 113, 209);
         
 
+        :nth-child(1),
+        :nth-child(2),
+        :nth-child(3) {
+            margin: 12px;
+            //border-radius: 20%;
+            font-size: clamp(0.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
+           // border: 4px solid white;
+            width: 3rem;
+            height: 3rem;
+
+        }
+/*
+        :nth-child(1):focus,
+        :nth-child(2):focus,
+        :nth-child(3):focus {
+
+            //border-radius: 50%;
+
+
+        }
+        */
+
     }
 
-}
 
 #un {
     background-color: rgb(252, 111, 221);
-    
+
 }
 
 #deux {
     background-color: rgb(151, 252, 111);
-    
+
 }
 
 #trois {
     background-color: rgb(111, 167, 252);
-    
+
+}
 }

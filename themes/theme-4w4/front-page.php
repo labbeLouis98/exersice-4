@@ -20,10 +20,35 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
     </header><!-- .page-header -->
+
+    <!-- debut du carrousel-->
+
+    <section class="carrousel">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+
+    <section class="boutons">
+        
+            <input id='un' type="radio" >
+
+        
+            <input id='deux' type="radio">
+
+        
+            <input id='trois' type="radio">
+
+       
+    </section>
+
+    <!-- fin du carrousel-->
+
+
     <section>
 
 
-    <?php
+        <?php
 			/* Start the Loop */
             $precedent = "XXXXXXX";
 			while ( have_posts() ) :
@@ -35,15 +60,15 @@ get_header();
                 $sigle = substr($titre_grand,0 , 7);
                 $typeCours = get_field('type_de_cours');
                 if ($precedent =! $typeCours): ?>
-               <?php
-                 if ($precedent != "XXXXXXX") ?> 
-                </section>
-               
-                
+        <?php
+                 if ($precedent != "XXXXXXX") ?>
+    </section>
 
-              <?php endif ?>
 
-              <!-- <h2> <?php echo $titre ?> </h2> -->
+
+    <?php endif ?>
+
+    <!-- <h2> <?php echo $titre ?> </h2> -->
 
     <article>
         <p> <?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?> </p>
@@ -61,9 +86,8 @@ get_header();
         endif;
     ?>
 
+</main> <!-- #main -->
 
- </main> <!-- #main -->
-
-        <?php
+<?php
 get_sidebar();
 get_footer();

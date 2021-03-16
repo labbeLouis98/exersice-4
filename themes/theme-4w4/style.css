@@ -659,7 +659,7 @@ textarea {
 --------------------------------------------------------------*/
 body {
   overflow-x: hidden;
-  background-color: #ffd2b4;
+  background-color: #e2f0fd;
 }
 
 .no-sidebar .site {
@@ -1109,7 +1109,7 @@ menu tablet
 
 #primary {
   width: 100vw;
-  margin-left: 3rem;
+  margin: 0;
 }
 
 .site-description {
@@ -1191,6 +1191,7 @@ body.home::after {
   justify-content: center;
   align-items: center;
   width: 90%;
+  /* ------------------------------------------------------------- media query */
   border: 1px solid black;
 }
 
@@ -1212,10 +1213,16 @@ body.home::after {
   text-decoration: none;
 }
 
-/* media query */
 /* Local/carrousel
 --------------------------------------------- */
-.carrousel {
+.list-cours {
+  /*-----------------------------------------------------------*/
+  /*-------------couleur des boutons 1 3 4 --------------------*/
+  /*-----------------------------------------------------------*/
+  /*-------------Ajout de la section et de la class boutons-----------------*/
+}
+
+.list-cours .carrousel {
   display: flex;
   width: 300vw;
   height: 20vh;
@@ -1223,7 +1230,7 @@ body.home::after {
   justify-content: center;
 }
 
-.carrousel div {
+.list-cours .carrousel div {
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -1232,55 +1239,54 @@ body.home::after {
   color: #1a2129;
 }
 
-.carrousel div:nth-of-type(1) {
+.list-cours .carrousel div:nth-of-type(1) {
   background-color: #fc6fdd;
 }
 
-.carrousel div:nth-of-type(2) {
+.list-cours .carrousel div:nth-of-type(2) {
   background-color: #97fc6f;
 }
 
-.carrousel div:nth-of-type(3) {
+.list-cours .carrousel div:nth-of-type(3) {
   background-color: #6fa7fc;
 }
 
-/*-----------------------------------------------------------*/
-/*-------------couleur des boutons 1 3 4 --------------------*/
-/*-----------------------------------------------------------*/
-/*-------------Ajout de la section et de la class boutons-----------------*/
-.boutons {
+.list-cours .boutons {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  background-color: white;
+  background-color: #3e71d1;
+  /*
+        :nth-child(1):focus,
+        :nth-child(2):focus,
+        :nth-child(3):focus {
+
+            //border-radius: 50%;
+
+
+        }
+        */
 }
 
-.boutons :nth-child(1),
-.boutons :nth-child(2),
-.boutons :nth-child(3) {
-  border-radius: 20%;
+.list-cours .boutons :nth-child(1),
+.list-cours .boutons :nth-child(2),
+.list-cours .boutons :nth-child(3) {
+  margin: 12px;
   font-size: clamp(0.5rem, -0.875rem + 8.333vw, 2rem);
-  border: 4px solid white;
-  width: 6rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
 }
 
-.boutons :nth-child(1):focus,
-.boutons :nth-child(2):focus,
-.boutons :nth-child(3):focus {
-  border-radius: 50%;
-}
-
-#un {
+.list-cours #un {
   background-color: #fc6fdd;
 }
 
-#deux {
+.list-cours #deux {
   background-color: #97fc6f;
 }
 
-#trois {
+.list-cours #trois {
   background-color: #6fa7fc;
 }
 

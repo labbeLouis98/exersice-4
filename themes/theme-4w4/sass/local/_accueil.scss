@@ -13,7 +13,8 @@
 
 #primary {
     width: 100vw;
-    margin-left: 3rem;
+    //margin-left: 3rem;
+    margin: 0; 
 
 }
 
@@ -94,13 +95,13 @@ body.home::after {
         justify-content: space-between;
 
         article{
-            
             display: flex;
             flex-direction: column;
          justify-content: center;
          align-items: center;
          width: 90%; // ajuster le width pour  mobile
 
+         /* ------------------------------------------------------------- media query */
         @include tablette{
             justify-content: space-between;
             width: 30%; // ajuster le width pour desktop
@@ -129,4 +130,4 @@ body.home::after {
 }
 
 
-/* media query */
+
