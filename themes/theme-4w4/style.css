@@ -523,7 +523,7 @@ a {
 }
 
 a:visited {
-  color: #800080;
+  color: #222279;
 }
 
 a:hover, a:focus, a:active {
@@ -539,7 +539,7 @@ a:hover, a:active {
 }
 
 .main-navigation a {
-  color: #fafce9;
+  color: #F1FAEE;
   margin-left: 3rem;
   /*&:visited {
 			color: $color__linkmenu-visited;
@@ -548,7 +548,7 @@ a:hover, a:active {
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
-  color: #e2e261;
+  color: #E63946;
 }
 
 .main-navigation a:focus {
@@ -560,16 +560,16 @@ a:hover, a:active {
 }
 
 .site-title a {
-  color: #405cdb;
+  color: #1D3557;
   /*margin-left: 3rem;*/
 }
 
 .site-title a:visited {
-  color: #3879f1;
+  color: #1D3557;
 }
 
 .site-title a:hover, .site-title a:focus, .site-title a:active {
-  color: #1b3ccf;
+  color: #1D3557;
 }
 
 .site-title a:focus {
@@ -659,7 +659,7 @@ textarea {
 --------------------------------------------------------------*/
 body {
   overflow-x: hidden;
-  background-color: #e2f0fd;
+  background-color: #F1FAEE;
 }
 
 .no-sidebar .site {
@@ -682,7 +682,14 @@ body {
 
 */
 .site-branding, #primary, #colophon {
-  margin-left: .5rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 800px) {
+  .site-branding, #primary, #colophon {
+    margin: 0;
+  }
 }
 
 /*
@@ -741,12 +748,6 @@ body {
 .main-navigation ul li {
   position: relative;
   flex: 1;
-  /*
-	
-			&:hover > a,
-			&.focus > a {
-			}
-		*/
 }
 
 .main-navigation a {
@@ -833,8 +834,8 @@ menu tablet
   .main-navigation ul li:hover ul {
     display: block;
     position: absolute;
-    width: 400px;
-    height: 650px;
+    width: 260px;
+    height: 600px;
   }
   .main-navigation.toggled ul ul,
   .main-navigation ul ul {
@@ -1097,9 +1098,9 @@ menu tablet
 --------------------------------------------- */
 .site-title {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(2rem, -0.875rem + 8.333vw, 4rem);
-  font-weight: bold;
+  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 5rem);
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .site-title a {
@@ -1160,9 +1161,9 @@ body.home::after {
   justify-content: center;
   align-items: center;
   width: 90%;
-  background-color: #E9C46A;
+  background-color: #c3e1e2;
   /* ------------------------------------------------------------- media query */
-  border: 1px solid black;
+  margin: 1rem;
 }
 
 @media (min-width: 800px) {
@@ -1173,14 +1174,16 @@ body.home::after {
 }
 
 .list-cours section article p {
-  font-size: .7rem;
+  font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.1rem);
   font-weight: bold;
+  color: #1D3557;
 }
 
 .list-cours section article a {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
   font-weight: bold;
   text-decoration: none;
+  margin: 0;
 }
 
 /* Local/carrousel
@@ -1239,7 +1242,7 @@ body.home::after {
 }
 
 .list-cours #un, .list-cours #deux, .list-cours #trois {
-  background-color: #2A9D8F;
+  background-color: #A8DADC;
   border-radius: 50%;
   width: 3rem;
   height: 3rem;

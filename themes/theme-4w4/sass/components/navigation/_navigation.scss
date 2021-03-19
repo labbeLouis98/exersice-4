@@ -1,8 +1,6 @@
 .main-navigation {
 	display: block;
 	width: 100vw;
-
-
 	ul {
 		display: none;
 		position: absolute;
@@ -51,12 +49,7 @@
 		li {
 			position: relative;
 			flex: 1;
-			/*
 	
-			&:hover > a,
-			&.focus > a {
-			}
-		*/
 		}
 
 	}
@@ -182,8 +175,8 @@ menu tablet
 		li:hover ul {
 			display: block;
 			position: absolute;
-			width: 400px;
-			height: 650px;
+			width: 260px;
+			height: 600px;
 		}
 
 		ul {

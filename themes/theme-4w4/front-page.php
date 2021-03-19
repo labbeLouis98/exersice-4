@@ -24,9 +24,9 @@ get_header();
     <!-- debut du carrousel-->
 
     <section class="carrousel">
-        <div>1 </div>
-        <div>2</div>
-        <div>3</div>
+        <div>Apprentissage</div>
+        <div>Création</div>
+        <div>Intégration</div>
     </section>
 
     <section class="boutons">
@@ -62,14 +62,18 @@ get_header();
                 $typeCours = get_field('type_de_cours');
                 if ($precedent =! $typeCours): ?>
         <?php
-                 if ($precedent != "XXXXXXX") ?>
+                 if ($precedent != "XXXXXXX"): ?>
     </section>
-
-
 
     <?php endif ?>
 
-    <!-- <h2> <?php echo $titre ?> </h2> -->
+    <!-- <h2> <?php echo $typeCours ?> </h2> -->
+    <h2> <?php echo $typeCours ?> </h2>
+    
+
+    <section>
+
+    <?php endif ?>
 
     <article>
         <p> <?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?> </p>
@@ -80,7 +84,7 @@ get_header();
 
     <?php
     $precedent = $typeCours;
-    endwhile; ?>
+    endwhile ?>
 
     </section>
 
