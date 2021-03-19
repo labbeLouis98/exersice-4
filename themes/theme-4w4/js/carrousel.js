@@ -13,33 +13,36 @@
 	bout1.addEventListener('mousedown', function () {
 		carrousel.style.transform = "translateX(0)"
 
-		if (bout1.cheked = true){
+		/*if (bout1.cheked = true){
 			bout2.cheked = false;
 			bout3.cheked = false;
 			
 		}
+		*/
 
 	})
 
 	bout2.addEventListener('mousedown', function () {
 		carrousel.style.transform = "translateX(-100vw)"
 
-		if (bout2.cheked = true){
+		/*if (bout2.cheked = true){
 			bout1.cheked = false;
 			bout3.cheked = false;
 			
 		}
+		*/
 
 	})
 
 	bout3.addEventListener('mousedown', function () {
 		carrousel.style.transform = "translateX(-200vw)"
 
-		if (bout3.cheked = true){
+		/*if (bout3.cheked = true){
 			bout1.cheked = false;
 			bout2.cheked = false;
 		
 		}
+		*/
 
 	})
 

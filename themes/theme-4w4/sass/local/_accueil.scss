@@ -14,7 +14,7 @@
 #primary {
     width: 100vw;
     //margin-left: 3rem;
-    margin: 0; 
+    margin: 0;
 
 }
 
@@ -22,39 +22,8 @@
     font-family: $font__title;
     font-size: clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
     font-weight: normal;
-
     margin-top: 0;
 }
- /*
-.accueil {
-
-
-    ul {
-        list-style-type: none;
-        font-size: clamp(.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
-        
-        align-items: center;
-    }
-
-    li {
-        font-size: clamp(1rem, #{"-0.875rem + 3.333vw"}, 1.8rem);
-        display: flex;
-        justify-content: left;
-    }
-
-    img {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        border-radius: 30%;
-        place-items: center;
-    }
-
-}
-
-*/
 
 body.home {
 
@@ -75,59 +44,63 @@ body.home::after {
 
     @include tablette {
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
-        
+
     }
 
     z-index: -1;
 }
+
 /*Site-main appellé : list-cours */
 //.site-main
-.list-cours{
+.list-cours {
     display: flex;
     flex-direction: column;
 
-    section{
+    section {
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        //align-items: center;
         justify-content: space-between;
 
-        article{
+        article {
             display: flex;
             flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         width: 90%; // ajuster le width pour  mobile
+            justify-content: center;
+            align-items: center;
+            width: 90%; // ajuster le width pour  mobile
+            background-color: #E9C46A;
 
-         /* ------------------------------------------------------------- media query */
-        @include tablette{
-            justify-content: space-between;
-            width: 30%; // ajuster le width pour desktop
+            /* ------------------------------------------------------------- media query */
+            @include tablette {
+                justify-content: space-between;
+                width: 30%; // ajuster le width pour desktop
 
+            }
+
+            border: 1px solid black;
+
+
+            p {
+                font-size: .7rem;
+                font-weight: bold;
+
+
+            }
+
+            a {
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-decoration: none;
+            }
         }
-         border: 1px solid black;
-         
-    
-         p{
-             font-size: .7rem;
-             font-weight: bold;
-             
-    
-         }
-    
-         a{
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-         }
-        } //fin article
+
+       
+        //fin article
 
     }
+
     
-     
+
+
 }
-
-
-

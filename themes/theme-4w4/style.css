@@ -709,7 +709,7 @@ body {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: #1a71d4;
+  background-color: #264653;
   text-align: left;
   justify-content: left;
   /* fin sub menu */
@@ -717,7 +717,6 @@ body {
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
   position: absolute;
   top: 100%;
   transition: left .2s;
@@ -1119,36 +1118,6 @@ menu tablet
   margin-top: 0;
 }
 
-/*
-.accueil {
-
-
-    ul {
-        list-style-type: none;
-        font-size: clamp(.5rem, -0.875rem + 8.333vw, 2rem);
-        
-        align-items: center;
-    }
-
-    li {
-        font-size: clamp(1rem, -0.875rem + 3.333vw, 1.8rem);
-        display: flex;
-        justify-content: left;
-    }
-
-    img {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        border-radius: 30%;
-        place-items: center;
-    }
-
-}
-
-*/
 body.home {
   height: 100vh;
   width: 100vw;
@@ -1191,6 +1160,7 @@ body.home::after {
   justify-content: center;
   align-items: center;
   width: 90%;
+  background-color: #E9C46A;
   /* ------------------------------------------------------------- media query */
   border: 1px solid black;
 }
@@ -1240,15 +1210,15 @@ body.home::after {
 }
 
 .list-cours .carrousel div:nth-of-type(1) {
-  background-color: #fc6fdd;
+  background-color: #7386ae;
 }
 
 .list-cours .carrousel div:nth-of-type(2) {
-  background-color: #97fc6f;
+  background-color: #73ae73;
 }
 
 .list-cours .carrousel div:nth-of-type(3) {
-  background-color: #6fa7fc;
+  background-color: #ae73a6;
 }
 
 .list-cours .boutons {
@@ -1256,17 +1226,7 @@ body.home::after {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  background-color: #3e71d1;
-  /*
-        :nth-child(1):focus,
-        :nth-child(2):focus,
-        :nth-child(3):focus {
-
-            //border-radius: 50%;
-
-
-        }
-        */
+  background-color: #557a95;
 }
 
 .list-cours .boutons :nth-child(1),
@@ -1278,16 +1238,14 @@ body.home::after {
   height: 3rem;
 }
 
-.list-cours #un {
-  background-color: #fc6fdd;
-}
-
-.list-cours #deux {
-  background-color: #97fc6f;
-}
-
-.list-cours #trois {
-  background-color: #6fa7fc;
+.list-cours #un, .list-cours #deux, .list-cours #trois {
+  background-color: #2A9D8F;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Local/burger
