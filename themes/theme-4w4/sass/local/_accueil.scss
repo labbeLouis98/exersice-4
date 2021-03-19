@@ -28,6 +28,7 @@ body.home {
 
     height: 100vh;
     width: 100vw;
+    
 
 }
 
@@ -54,30 +55,37 @@ body.home::after {
 .list-cours {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    
 
     section {
+        width: 100vw;
+        
+        
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-
+        
         article {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 90%; // ajuster le width pour  mobile
+            width: 89%; // ajuster le width pour  mobile
             background-color: #c3e1e2;
+            margin: 1%;
 
             /* ------------------------------------------------------------- media query */
             @include tablette {
                 justify-content: space-between;
-                width: 30%; // ajuster le width pour desktop
+                width: 29%; // ajuster le width pour desktop
+                
 
             }
 
-            margin: 1rem;
+            
 
 
             p {

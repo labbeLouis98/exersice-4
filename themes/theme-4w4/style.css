@@ -519,15 +519,15 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: #264653;
 }
 
 a:visited {
-  color: #222279;
+  color: #1D3557;
 }
 
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #1D3557;
 }
 
 a:focus {
@@ -548,7 +548,7 @@ a:hover, a:active {
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
-  color: #E63946;
+  color: #f4a261;
 }
 
 .main-navigation a:focus {
@@ -660,6 +660,9 @@ textarea {
 body {
   overflow-x: hidden;
   background-color: #F1FAEE;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .no-sidebar .site {
@@ -683,12 +686,15 @@ body {
 */
 .site-branding, #primary, #colophon {
   display: flex;
+  margin: 0;
+  padding: 0;
   justify-content: center;
 }
 
 @media (min-width: 800px) {
   .site-branding, #primary, #colophon {
     margin: 0;
+    padding: 0;
   }
 }
 
@@ -1146,9 +1152,11 @@ body.home::after {
 .list-cours {
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 
 .list-cours section {
+  width: 100vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1160,16 +1168,16 @@ body.home::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 89%;
   background-color: #c3e1e2;
+  margin: 1%;
   /* ------------------------------------------------------------- media query */
-  margin: 1rem;
 }
 
 @media (min-width: 800px) {
   .list-cours section article {
     justify-content: space-between;
-    width: 30%;
+    width: 29%;
   }
 }
 
@@ -1189,16 +1197,14 @@ body.home::after {
 /* Local/carrousel
 --------------------------------------------- */
 .list-cours {
-  /*-----------------------------------------------------------*/
-  /*-------------couleur des boutons 1 3 4 --------------------*/
-  /*-----------------------------------------------------------*/
   /*-------------Ajout de la section et de la class boutons-----------------*/
+  /*-------------Boutons et radio boutons ---------------------*/
 }
 
 .list-cours .carrousel {
   display: flex;
   width: 300vw;
-  height: 20vh;
+  height: 25vh;
   transition: transform .5s;
   justify-content: center;
 }
@@ -1213,11 +1219,11 @@ body.home::after {
 }
 
 .list-cours .carrousel div:nth-of-type(1) {
-  background-color: #7386ae;
+  background-color: #2a9d8f;
 }
 
 .list-cours .carrousel div:nth-of-type(2) {
-  background-color: #73ae73;
+  background-color: #f4a261;
 }
 
 .list-cours .carrousel div:nth-of-type(3) {
@@ -1251,6 +1257,27 @@ body.home::after {
   align-items: center;
 }
 
+/*-----------------------------------------------------------*/
+/*-------------Animation svg et titre dans les slider -------*/
+/*-----------------------------------------------------------*/
+#svg1, #svg2, #svg3 {
+  margin: 1rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+/*@keyframes ouvrirX1 {
+        0% {
+            
+        }
+    
+        100% {
+            
+    
+        }
+    
+    }
+    */
 /* Local/burger
 --------------------------------------------- */
 /*-------------------------------------------------

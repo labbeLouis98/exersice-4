@@ -1,6 +1,9 @@
 body{
 	overflow-x: hidden;
 	background-color: #F1FAEE; //cnahgement de la couleur du background du body html
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
 
@@ -33,10 +36,13 @@ body{
 
 .site-branding, #primary, #colophon {
 	display: flex;
+	margin: 0;
+		padding: 0;
 	justify-content: center;
 	@include tablette{
 		//margin-left: 2rem;
 		margin: 0;
+		padding: 0;
 	}
 }
 

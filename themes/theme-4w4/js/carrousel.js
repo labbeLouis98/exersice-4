@@ -1,4 +1,6 @@
 (function () {
+
+	/*---------------------les boutons-----------------------*/
 	let bout1 = document.getElementById('un')
 	//console.log(bout1.id)
 
@@ -8,10 +10,19 @@
 	let bout3 = document.getElementById('trois')
 	//console.log(bout3.id)
 
+	/*---------------------caroussel -----------------------*/
+
 	let carrousel = document.querySelector('.carrousel')
 
+	/*---------------------les svg et titre -----------------------*/
+
+	
+
+	
+
 	bout1.addEventListener('mousedown', function () {
-		carrousel.style.transform = "translateX(0)"
+		carrousel.style.transform = "translateX(0)";
+		
 
 		/*if (bout1.cheked = true){
 			bout2.cheked = false;
