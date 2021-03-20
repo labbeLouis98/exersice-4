@@ -23,6 +23,7 @@
 			z-index: 99999;
 
 			li {
+				margin: 0;
 				a {
 					
 					padding-left: 12px;
@@ -135,7 +136,7 @@ Bouton burger
 }
 
 /* ---------------------------------------------------------------------------
-menu tablet
+menu tablette
 ------------------------------------------------------------------------------ */
 @media screen and (min-width: 37.5em) {
 
@@ -148,7 +149,7 @@ menu tablet
 	.main-navigation ul {
 		display: flex;
 		position: static;
-		justify-content: space-around;
+		//justify-content: space-around;
 		align-items: center;
 		position: static;
 		width: 100vw;

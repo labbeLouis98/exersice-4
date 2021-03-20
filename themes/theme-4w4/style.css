@@ -737,6 +737,10 @@ body {
   z-index: 99999;
 }
 
+.main-navigation ul ul li {
+  margin: 0;
+}
+
 .main-navigation ul ul li a {
   padding-left: 12px;
 }
@@ -813,7 +817,7 @@ Bouton burger
 }
 
 /* ---------------------------------------------------------------------------
-menu tablet
+menu tablette
 ------------------------------------------------------------------------------ */
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
@@ -823,7 +827,6 @@ menu tablet
   .main-navigation ul {
     display: flex;
     position: static;
-    justify-content: space-around;
     align-items: center;
     position: static;
     width: 100vw;
@@ -1279,6 +1282,20 @@ div #svg1, div #svg2, div #svg3 {
 
 /* Local/burger
 --------------------------------------------- */
+.menu-toggle {
+  background-color: #F1FAEE;
+}
+
+.menu-toggle:hover {
+  background-color: #F1FAEE;
+  border: none;
+}
+
+.menu-toggle:focus {
+  border: none;
+  background-color: #F1FAEE;
+}
+
 /*-------------------------------------------------
 Variables Sass
 --------------------------------------------------*/
