@@ -16,8 +16,8 @@ get_header();
 
     <header class="page-header">
         <?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
+				//the_archive_title( '<h1 class="page-title">', '</h1>' ); 
+				//the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
     </header><!-- .page-header -->
 
@@ -25,16 +25,16 @@ get_header();
 
     <section class="carrousel">
         <div>
-            Apprentissage
+            <p>Apprentissage</p>
             <img id="svg1" src="https://s2.svgbox.net/illlustrations.svg?ic=programing&color=000000">
 
         </div>
         <div>
-            Création
+        <p>Création</p>
             <img id="svg2" src="https://s2.svgbox.net/illlustrations.svg?ic=wacom-tablet&color=000000">
         </div>
         <div>
-            Intégration
+        <p>Intégration</p>
             <img id="svg3" src="https://s2.svgbox.net/illlustrations.svg?ic=app-development&color=000000">
 
         </div>
@@ -57,7 +57,7 @@ get_header();
     <!-- fin du carrousel-->
 
 
-    <section>
+    <section class="contenu">
 
 
         <?php

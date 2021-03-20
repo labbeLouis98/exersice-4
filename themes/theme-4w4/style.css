@@ -1258,26 +1258,31 @@ body.home::after {
 }
 
 /*-----------------------------------------------------------*/
-/*-------------Animation svg et titre dans les slider -------*/
+/*------------- svg et textes dans les slider ---------------*/
 /*-----------------------------------------------------------*/
-#svg1, #svg2, #svg3 {
-  margin: 1rem;
-  width: 10rem;
-  height: 10rem;
+div {
+  display: flex;
 }
 
-/*@keyframes ouvrirX1 {
-        0% {
-            
-        }
-    
-        100% {
-            
-    
-        }
-    
-    }
-    */
+div p {
+  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 3rem);
+}
+
+div #svg1, div #svg2, div #svg3 {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (min-width: 800px) {
+  div #svg1, div #svg2, div #svg3 {
+    display: block;
+    margin: 1rem;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
 /* Local/burger
 --------------------------------------------- */
 /*-------------------------------------------------

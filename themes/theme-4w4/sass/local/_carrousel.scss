@@ -1,6 +1,7 @@
 
 .list-cours{
     
+    
 .carrousel {
     display: flex;
     width: 300vw;
@@ -23,8 +24,6 @@
         font-size: clamp(2rem, #{"-0.875rem + 8.333vw"}, 4rem);
 
         color: rgb(26, 33, 41);
-
-
 
         &:nth-of-type(1) {
             background-color: #2a9d8f;
@@ -96,30 +95,39 @@
 }
 
 /*-----------------------------------------------------------*/
-/*-------------Animation svg et titre dans les slider -------*/
+/*------------- svg et textes dans les slider ---------------*/
 /*-----------------------------------------------------------*/
 
    
-    
+    div{
+        display: flex;
+        
+        p{
+            
+            font-size:clamp(2.5rem, #{"-0.875rem + 8.333vw"}, 3rem) ;
+        }
     #svg1,#svg2,#svg3{
-        margin: 1rem;
-        width: 10rem;
-        height: 10rem;
+        display: none;
+
+
+        width: 2rem;
+            height: 2rem;
+
+
+        @include tablette{
+            display: block;
+            margin: 1rem;
+            width: 10rem;
+            height: 10rem;
+    
+        }
+       
         
     }
-    
-    /*@keyframes ouvrirX1 {
-        0% {
-            
-        }
-    
-        100% {
-            
-    
-        }
-    
-    }
-    */
+
+}
+
+  
 
     
         
