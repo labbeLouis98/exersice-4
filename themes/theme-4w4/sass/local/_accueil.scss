@@ -10,45 +10,40 @@
 
 }
 
-#primary {
-    width: 100vw;
-    //margin-left: 3rem;
-    margin: 0;
-
-}
-
-.site-description {
-    font-family: $font__title;
-    font-size: clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
-    font-weight: normal;
-    margin-top: 0;
-}
-
 body.home {
 
     height: 100vh;
     width: 100vw;
-    
+
 
 }
 
+/*----------------------------Clip Path--------------------------*/
 body.home::after {
     content: "";
     position: absolute;
+    
     width: 100%;
-    height: 100%;
+    height: 20%;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    
+    
+    
 
     @include tablette {
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background-color: #f4a261;
 
     }
 
     z-index: -1;
 }
+
+
+/*----------------------------MEP SECTION et article--------------------------*/
 
 /*Site-main appellé : list-cours */
 //.site-main
@@ -56,19 +51,15 @@ body.home::after {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    
-
     section {
+
         width: 100vw;
-        
-        
-        
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        
+
         article {
             display: flex;
             flex-direction: column;
@@ -77,44 +68,46 @@ body.home::after {
             width: 89%; // ajuster le width pour  mobile
             background-color: #c3e1e2;
             margin: 1%;
+            border-radius: 12px;
+
 
             /* ------------------------------------------------------------- media query */
             @include tablette {
                 justify-content: space-between;
                 width: 29%; // ajuster le width pour desktop
-                
+
 
             }
 
-            
-
-
             p {
+
                 font-size:clamp(0.7rem, #{"-0.875rem + 8.333vw"}, 1.1rem);
                 font-weight: bold;
                 color: #1D3557;
-                
-
 
             }
 
             a {
-                font-size:clamp(1rem, #{"-0.875rem + 8.333vw"}, 2rem);
+
+                padding: 0;
+                margin: 10px;
+                font-size:clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.8rem);
                 font-weight: bold;
                 text-decoration: none;
-                margin: 0;
+                color: #1D3557;
+
+
             }
         }
 
-       
+
         //fin article
 
-        
+
 
     }
 
-    
+
 
 
 }
-
