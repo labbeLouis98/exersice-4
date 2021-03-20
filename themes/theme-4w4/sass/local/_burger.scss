@@ -14,13 +14,14 @@ $epaisseur: 7%;
 Bouton burger
 ----------------------------------------------------*/
 #burger {
+    margin: .5rem;
     
     position: relative;
     width: $largeur_burger;
     height: $largeur_burger;
     
     overflow: hidden;
-    
+    background-color: #c3e1e2;
 
     border-radius: 50%;
 
@@ -38,7 +39,7 @@ Bouton burger
             //clip-path: polygon($epaisseur (-$epaisseur), (100%+$epaisseur) (100%-$epaisseur), (100%-$epaisseur) (100%+$epaisseur), (-$epaisseur) $epaisseur); // etat fin epaisseur 1
 
 
-            background-color: aqua;
+            background-color: #264653;
         }
 
         &:nth-of-type(2) {
@@ -48,7 +49,7 @@ Bouton burger
             //clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);  // etat fin
 
 
-            background-color: rgb(200, 231, 23);
+            background-color: #f4a261;
             
         }
 
@@ -63,7 +64,7 @@ Bouton burger
 
 
 
-            background-color: rgb(255, 0, 200);
+            background-color: #264653;
 
         }
     }

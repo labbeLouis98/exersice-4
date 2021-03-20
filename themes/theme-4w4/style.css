@@ -1292,10 +1292,12 @@ Variables Sass
 Bouton burger
 ----------------------------------------------------*/
 #burger {
+  margin: .5rem;
   position: relative;
   width: 4rem;
   height: 4rem;
   overflow: hidden;
+  background-color: #c3e1e2;
   border-radius: 50%;
 }
 
@@ -1307,17 +1309,17 @@ Bouton burger
 
 #burger div:nth-of-type(1) {
   clip-path: polygon(0 15%, 100% 15%, 100% 27%, 0 27%);
-  background-color: aqua;
+  background-color: #264653;
 }
 
 #burger div:nth-of-type(2) {
   clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-  background-color: #c8e717;
+  background-color: #f4a261;
 }
 
 #burger div:nth-of-type(3) {
   clip-path: polygon(0 75%, 100% 75%, 100% 87%, 0 87%);
-  background-color: #ff00c8;
+  background-color: #264653;
 }
 
 /*-------------------------------------------------------------------
