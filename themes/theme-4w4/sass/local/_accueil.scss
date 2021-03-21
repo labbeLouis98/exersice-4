@@ -93,22 +93,25 @@ body.home::after {
             @include tablette {
                 justify-content: space-between;
                 width: 29%; // ajuster le width pour desktop
+                
 
 
             }
 
             p {
-
+                
+                
                 font-size:clamp(0.7rem, #{"-0.875rem + 8.333vw"}, 1.1rem);
                 font-weight: bold;
                 color: #1D3557;
+                
 
             }
 
             a {
 
-                padding: 0;
-                margin: 10px;
+                
+                text-align: center;
                 font-size:clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.8rem);
                 font-weight: bold;
                 text-decoration: none;
@@ -118,14 +121,14 @@ body.home::after {
             }
         }
 
-
         //fin article
-
-
 
     }
 
+}
 
-
-
+/*---------------changement couleur footer----------------------*/
+footer{
+    background-color: #f4a261;
+    color: #1D3557;
 }

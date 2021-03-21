@@ -527,7 +527,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-  color: #1D3557;
+  color: #f4a261;
 }
 
 a:focus {
@@ -862,6 +862,7 @@ menu tablet
   .main-navigation.toggled ul a,
   .main-navigation ul a {
     font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1.4rem);
+    text-align: center;
   }
 }
 
@@ -1200,11 +1201,16 @@ body.home::after {
 }
 
 .list-cours section article a {
-  padding: 0;
-  margin: 10px;
+  text-align: center;
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.8rem);
   font-weight: bold;
   text-decoration: none;
+  color: #1D3557;
+}
+
+/*---------------changement couleur footer----------------------*/
+footer {
+  background-color: #f4a261;
   color: #1D3557;
 }
 
