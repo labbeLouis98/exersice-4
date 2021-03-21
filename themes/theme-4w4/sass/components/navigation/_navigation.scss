@@ -23,7 +23,6 @@
 			z-index: 99999;
 
 			li {
-				margin: 0;
 				a {
 					
 					padding-left: 12px;
@@ -75,6 +74,7 @@ Bouton burger
 	//	transition : transform .25s;
 	//	transform : rotate(0deg);
 	border: 0;
+	
 }
 
 .menu-toggle:hover,
@@ -100,9 +100,10 @@ Bouton burger
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
-
+	
 	li {
+		
+
 		a {
 			&[href="#"]::after {
 				position: absolute;
@@ -136,23 +137,38 @@ Bouton burger
 }
 
 /* ---------------------------------------------------------------------------
-menu tablette
+menu tablet
 ------------------------------------------------------------------------------ */
 @media screen and (min-width: 37.5em) {
 
 	.menu-toggle {
 		display: none;
+		
 
 	}
+	.main-navigation{
+		.menu-principal-container{
+			height: 4rem;
+
+		
+		a{
+			margin-left: 0;
+			display: flex;
+			justify-content:left ;
+		} 
+	}
+		
+}
+
 
 	.main-navigation.toggled ul,
 	.main-navigation ul {
 		display: flex;
 		position: static;
-		//justify-content: space-around;
 		align-items: center;
-		position: static;
 		width: 100vw;
+		margin: 0;
+		
 		a {
 			&[href="#"]::after {
 				//display: none;
@@ -172,12 +188,20 @@ menu tablette
 	
 		}
 
-
+/*-----------------------affichage liste du menu deroulant----------------------*/
 		li:hover ul {
-			display: block;
+			display: flex;
+			flex-direction: column;  // flex vas permettre au width detre ajuste responsively 
 			position: absolute;
-			width: 260px;
-			height: 600px;
+			width: 100%;
+			margin:0;
+			padding: 0;
+			border: 0;
+			height: auto;  // hauter flex et responsive a la grosseur de la liste
+			a{
+				font-size: clamp(.8rem, #{"-0.875rem + 3.333vw"}, 1rem);
+				margin:0;
+			}
 		}
 
 		ul {
@@ -187,11 +211,8 @@ menu tablette
 
 
 		a {
-			//justify-content: left;
 			font-size: clamp(.8rem, #{"-0.875rem + 3.333vw"}, 1.2rem);
-			display: flex;
-			justify-content: left;
-			align-items: center;
+			
 			
 		}
 

@@ -737,10 +737,6 @@ body {
   z-index: 99999;
 }
 
-.main-navigation ul ul li {
-  margin: 0;
-}
-
 .main-navigation ul ul li a {
   padding-left: 12px;
 }
@@ -794,11 +790,6 @@ Bouton burger
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
 .menu-toggle li a[href="#"]::after,
 .main-navigation.toggled ul li a[href="#"]::after {
   position: absolute;
@@ -817,19 +808,28 @@ Bouton burger
 }
 
 /* ---------------------------------------------------------------------------
-menu tablette
+menu tablet
 ------------------------------------------------------------------------------ */
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
+  }
+  .main-navigation .menu-principal-container {
+    height: 4rem;
+  }
+  .main-navigation .menu-principal-container a {
+    margin-left: 0;
+    display: flex;
+    justify-content: left;
   }
   .main-navigation.toggled ul,
   .main-navigation ul {
     display: flex;
     position: static;
     align-items: center;
-    position: static;
     width: 100vw;
+    margin: 0;
+    /*-----------------------affichage liste du menu deroulant----------------------*/
   }
   .main-navigation.toggled ul a[href="#"]::after,
   .main-navigation ul a[href="#"]::after {
@@ -841,10 +841,19 @@ menu tablette
   }
   .main-navigation.toggled ul li:hover ul,
   .main-navigation ul li:hover ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    width: 260px;
-    height: 600px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: auto;
+  }
+  .main-navigation.toggled ul li:hover ul a,
+  .main-navigation ul li:hover ul a {
+    font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1rem);
+    margin: 0;
   }
   .main-navigation.toggled ul ul,
   .main-navigation ul ul {
@@ -853,9 +862,6 @@ menu tablette
   .main-navigation.toggled ul a,
   .main-navigation ul a {
     font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1.2rem);
-    display: flex;
-    justify-content: left;
-    align-items: center;
   }
 }
 
