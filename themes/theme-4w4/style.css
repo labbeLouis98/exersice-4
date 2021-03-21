@@ -861,7 +861,7 @@ menu tablet
   }
   .main-navigation.toggled ul a,
   .main-navigation ul a {
-    font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1.2rem);
+    font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1.4rem);
   }
 }
 
@@ -1116,10 +1116,21 @@ menu tablet
   font-size: clamp(2.5rem, -0.875rem + 8.333vw, 5rem);
   margin-bottom: 0;
   margin-top: 0;
+  animation: animTitre 2.5s both;
+  transition: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 .site-title a {
   text-decoration: none;
+}
+
+@keyframes animTitre {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 body.home {
