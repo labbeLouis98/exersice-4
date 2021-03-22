@@ -9,13 +9,8 @@
     transition: transform .5s;
     justify-content: center;
     
-
-
-    //justify-content: center;
-
     div {
         
-
         width: 100vw;
         display: flex;
         justify-content: center;
@@ -101,7 +96,7 @@
    
     div{
         display: flex;
-        
+
         p{
             
             font-size:clamp(2.5rem, #{"-0.875rem + 8.333vw"}, 3rem) ;

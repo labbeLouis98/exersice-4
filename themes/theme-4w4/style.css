@@ -686,8 +686,6 @@ body {
 */
 .site-branding, #primary, #colophon {
   display: flex;
-  margin: 0;
-  padding: 0;
   justify-content: center;
 }
 
@@ -698,13 +696,6 @@ body {
   }
 }
 
-/*
-#primary{
-	display: flex;
-	//justify-content: center
-}
-
-*/
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -1117,6 +1108,8 @@ menu tablet
   font-size: clamp(2.5rem, -0.875rem + 8.333vw, 5rem);
   margin-bottom: 0;
   margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
   animation: animTitre 2.5s both;
   transition: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
@@ -1132,11 +1125,6 @@ menu tablet
   100% {
     transform: translateY(0);
   }
-}
-
-body.home {
-  height: 100vh;
-  width: 100vw;
 }
 
 /*----------------------------Clip Path--------------------------*/
@@ -1167,45 +1155,58 @@ body.home::after {
   width: 100vw;
 }
 
-.list-cours section {
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.list-cours section article {
+.list-cours .contenu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 89%;
-  background-color: #c3e1e2;
-  margin: 1%;
-  border-radius: 12px;
-  /* ------------------------------------------------------------- media query */
 }
 
 @media (min-width: 800px) {
-  .list-cours section article {
-    justify-content: space-between;
-    width: 29%;
+  .list-cours .contenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
   }
 }
 
-.list-cours section article p {
+.list-cours .contenu article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #c3e1e2;
+  /* ------------------------------------------------------------- media query */
+}
+
+.list-cours .contenu article h2 {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .list-cours .contenu article {
+    justify-content: space-between;
+    width: 29%;
+    margin: 1%;
+  }
+}
+
+.list-cours .contenu article p {
   font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.1rem);
   font-weight: bold;
   color: #1D3557;
 }
 
-.list-cours section article a {
+.list-cours .contenu article a {
   text-align: center;
-  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.8rem);
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
   font-weight: bold;
   text-decoration: none;
   color: #1D3557;
+  margin: 1rem;
 }
 
 /*---------------changement couleur footer----------------------*/

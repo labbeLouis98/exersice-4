@@ -36,8 +36,8 @@ body{
 
 .site-branding, #primary, #colophon {
 	display: flex;
-	margin: 0;
-		padding: 0;
+	//margin: 0;
+		//padding: 0;
 	justify-content: center;
 	@include tablette{
 		
@@ -45,11 +45,3 @@ body{
 		padding: 0;
 	}
 }
-
-/*
-#primary{
-	display: flex;
-	//justify-content: center
-}
-
-*/
