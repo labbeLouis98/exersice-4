@@ -716,6 +716,7 @@ body {
   background-color: #264653;
   text-align: left;
   justify-content: left;
+  z-index: 999;
   /* fin sub menu */
 }
 
@@ -1190,7 +1191,7 @@ body.home::after {
   .list-cours .contenu article {
     justify-content: space-between;
     width: 29%;
-    margin: 1%;
+    margin: 4%;
   }
 }
 
