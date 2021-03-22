@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: theme-4w4
 Theme URI: http://underscores.me/
@@ -518,15 +519,15 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: #264653;
 }
 
 a:visited {
-  color: #800080;
+  color: #1D3557;
 }
 
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #f4a261;
 }
 
 a:focus {
@@ -538,7 +539,7 @@ a:hover, a:active {
 }
 
 .main-navigation a {
-  color: #fafce9;
+  color: #F1FAEE;
   margin-left: 3rem;
   /*&:visited {
 			color: $color__linkmenu-visited;
@@ -547,7 +548,7 @@ a:hover, a:active {
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
-  color: #e2e261;
+  color: #f4a261;
 }
 
 .main-navigation a:focus {
@@ -559,16 +560,16 @@ a:hover, a:active {
 }
 
 .site-title a {
-  color: #405cdb;
+  color: #1D3557;
   /*margin-left: 3rem;*/
 }
 
 .site-title a:visited {
-  color: #3879f1;
+  color: #1D3557;
 }
 
 .site-title a:hover, .site-title a:focus, .site-title a:active {
-  color: #1b3ccf;
+  color: #1D3557;
 }
 
 .site-title a:focus {
@@ -658,7 +659,10 @@ textarea {
 --------------------------------------------------------------*/
 body {
   overflow-x: hidden;
-  background-color: #ffd2b4;
+  background-color: #F1FAEE;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .no-sidebar .site {
@@ -681,16 +685,17 @@ body {
 
 */
 .site-branding, #primary, #colophon {
-  margin-left: .5rem;
+  display: flex;
+  justify-content: center;
 }
 
-/*
-#primary{
-	display: flex;
-	//justify-content: center
+@media (min-width: 800px) {
+  .site-branding, #primary, #colophon {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-*/
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -708,15 +713,15 @@ body {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: #1a71d4;
+  background-color: #264653;
   text-align: left;
   justify-content: left;
+  z-index: 999;
   /* fin sub menu */
 }
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
   position: absolute;
   top: 100%;
   transition: left .2s;
@@ -741,12 +746,6 @@ body {
 .main-navigation ul li {
   position: relative;
   flex: 1;
-  /*
-	
-			&:hover > a,
-			&.focus > a {
-			}
-		*/
 }
 
 .main-navigation a {
@@ -783,11 +782,6 @@ Bouton burger
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
 .menu-toggle li a[href="#"]::after,
 .main-navigation.toggled ul li a[href="#"]::after {
   position: absolute;
@@ -812,14 +806,22 @@ menu tablet
   .menu-toggle {
     display: none;
   }
+  .main-navigation .menu-principal-container {
+    height: 4rem;
+  }
+  .main-navigation .menu-principal-container a {
+    margin-left: 0;
+    display: flex;
+    justify-content: left;
+  }
   .main-navigation.toggled ul,
   .main-navigation ul {
     display: flex;
     position: static;
-    justify-content: space-around;
     align-items: center;
-    position: static;
     width: 100vw;
+    margin: 0;
+    /*-----------------------affichage liste du menu deroulant----------------------*/
   }
   .main-navigation.toggled ul a[href="#"]::after,
   .main-navigation ul a[href="#"]::after {
@@ -831,10 +833,19 @@ menu tablet
   }
   .main-navigation.toggled ul li:hover ul,
   .main-navigation ul li:hover ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    width: 400px;
-    height: 650px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: auto;
+  }
+  .main-navigation.toggled ul li:hover ul a,
+  .main-navigation ul li:hover ul a {
+    font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1rem);
+    margin: 0;
   }
   .main-navigation.toggled ul ul,
   .main-navigation ul ul {
@@ -842,10 +853,8 @@ menu tablet
   }
   .main-navigation.toggled ul a,
   .main-navigation ul a {
-    font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1.2rem);
-    display: flex;
-    justify-content: left;
-    align-items: center;
+    font-size: clamp(0.8rem, -0.875rem + 3.333vw, 1.4rem);
+    text-align: center;
   }
 }
 
@@ -1097,57 +1106,34 @@ menu tablet
 --------------------------------------------- */
 .site-title {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(2rem, -0.875rem + 8.333vw, 4rem);
-  font-weight: bold;
+  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 5rem);
   margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  animation: animTitre 2.5s both;
+  transition: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 .site-title a {
   text-decoration: none;
 }
 
-#primary {
-  width: 100vw;
-  margin-left: 3rem;
+@keyframes animTitre {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-.site-description {
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.5rem);
-  font-weight: normal;
-  margin-top: 0;
-}
-
-.accueil ul {
-  list-style-type: none;
-  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 2rem);
-  align-items: center;
-}
-
-.accueil li {
-  font-size: clamp(1rem, -0.875rem + 3.333vw, 1.8rem);
-  display: flex;
-  justify-content: left;
-}
-
-.accueil img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30%;
-  place-items: center;
-}
-
-body.home {
-  height: 100vh;
-  width: 100vw;
-}
-
+/*----------------------------Clip Path--------------------------*/
 body.home::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 20%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1157,21 +1143,95 @@ body.home::after {
 
 @media (min-width: 800px) {
   body.home::after {
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #f4a261;
   }
+}
+
+/*----------------------------MEP SECTION et article--------------------------*/
+/*Site-main appellé : list-cours */
+.list-cours {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.list-cours .contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .list-cours .contenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+}
+
+.list-cours .contenu article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #c3e1e2;
+  /* ------------------------------------------------------------- media query */
+}
+
+.list-cours .contenu article h2 {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .list-cours .contenu article {
+    justify-content: space-between;
+    width: 29%;
+    margin: 4%;
+  }
+}
+
+.list-cours .contenu article p {
+  font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.1rem);
+  font-weight: bold;
+  color: #1D3557;
+}
+
+.list-cours .contenu article a {
+  text-align: center;
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
+  font-weight: bold;
+  text-decoration: none;
+  color: #1D3557;
+  margin: 1rem;
+}
+
+/*---------------changement couleur footer----------------------*/
+footer {
+  background-color: #f4a261;
+  color: #1D3557;
 }
 
 /* Local/carrousel
 --------------------------------------------- */
-.carrousel {
+.list-cours {
+  /*-------------Ajout de la section et de la class boutons-----------------*/
+  /*-------------Boutons et radio boutons ---------------------*/
+}
+
+.list-cours .carrousel {
   display: flex;
   width: 300vw;
-  height: 20vh;
+  height: 25vh;
   transition: transform .5s;
   justify-content: center;
 }
 
-.carrousel div {
+.list-cours .carrousel div {
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -1180,60 +1240,87 @@ body.home::after {
   color: #1a2129;
 }
 
-.carrousel div:nth-of-type(1) {
-  background-color: #fc6fdd;
+.list-cours .carrousel div:nth-of-type(1) {
+  background-color: #2a9d8f;
 }
 
-.carrousel div:nth-of-type(2) {
-  background-color: #97fc6f;
+.list-cours .carrousel div:nth-of-type(2) {
+  background-color: #f4a261;
 }
 
-.carrousel div:nth-of-type(3) {
-  background-color: #6fa7fc;
+.list-cours .carrousel div:nth-of-type(3) {
+  background-color: #ae73a6;
 }
 
-/*-----------------------------------------------------------*/
-/*-------------couleur des boutons 1 3 4 --------------------*/
-/*-----------------------------------------------------------*/
-/*-------------Ajout de la section et de la class boutons-----------------*/
-.boutons {
+.list-cours .boutons {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  background-color: white;
+  background-color: #557a95;
 }
 
-.boutons :nth-child(1),
-.boutons :nth-child(2),
-.boutons :nth-child(3) {
-  border-radius: 20%;
+.list-cours .boutons :nth-child(1),
+.list-cours .boutons :nth-child(2),
+.list-cours .boutons :nth-child(3) {
+  margin: 12px;
   font-size: clamp(0.5rem, -0.875rem + 8.333vw, 2rem);
-  border: 4px solid white;
-  width: 6rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
 }
 
-.boutons :nth-child(1):focus,
-.boutons :nth-child(2):focus,
-.boutons :nth-child(3):focus {
+.list-cours #un, .list-cours #deux, .list-cours #trois {
+  background-color: #A8DADC;
   border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#un {
-  background-color: #fc6fdd;
+/*-----------------------------------------------------------*/
+/*------------- svg et textes dans les slider ---------------*/
+/*-----------------------------------------------------------*/
+div {
+  display: flex;
 }
 
-#deux {
-  background-color: #97fc6f;
+div p {
+  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 3rem);
 }
 
-#trois {
-  background-color: #6fa7fc;
+div #svg1, div #svg2, div #svg3 {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (min-width: 800px) {
+  div #svg1, div #svg2, div #svg3 {
+    display: block;
+    margin: 1rem;
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 /* Local/burger
 --------------------------------------------- */
+.menu-toggle {
+  background-color: #F1FAEE;
+}
+
+.menu-toggle:hover {
+  background-color: #F1FAEE;
+  border: none;
+}
+
+.menu-toggle:focus {
+  border: none;
+  background-color: #F1FAEE;
+}
+
 /*-------------------------------------------------
 Variables Sass
 --------------------------------------------------*/
@@ -1241,10 +1328,12 @@ Variables Sass
 Bouton burger
 ----------------------------------------------------*/
 #burger {
+  margin: .5rem;
   position: relative;
   width: 4rem;
   height: 4rem;
   overflow: hidden;
+  background-color: #c3e1e2;
   border-radius: 50%;
 }
 
@@ -1256,17 +1345,17 @@ Bouton burger
 
 #burger div:nth-of-type(1) {
   clip-path: polygon(0 15%, 100% 15%, 100% 27%, 0 27%);
-  background-color: aqua;
+  background-color: #264653;
 }
 
 #burger div:nth-of-type(2) {
   clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-  background-color: #c8e717;
+  background-color: #f4a261;
 }
 
 #burger div:nth-of-type(3) {
   clip-path: polygon(0 75%, 100% 75%, 100% 87%, 0 87%);
-  background-color: #ff00c8;
+  background-color: #264653;
 }
 
 /*-------------------------------------------------------------------
