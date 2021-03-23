@@ -21,7 +21,7 @@ get_header();
 				?>
     </header><!-- .page-header -->
 
-    <!-- debut du carrousel-->
+    <!-- debut du carrousel 1-->
 
     <section class="carrousel">
         <div>
@@ -39,6 +39,8 @@ get_header();
 
         </div>
     </section>
+
+    <!-- Fin du carrousel 1-->
 
     <section class="boutons">
 
