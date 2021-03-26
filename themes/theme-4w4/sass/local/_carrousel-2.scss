@@ -1,0 +1,80 @@
+.carrousel-2 {
+    display: flex;
+    width: 300vw;
+    height: 30vh;
+     transition: transform .5s;
+    //justify-content: center;
+
+    .slide__conteneur {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .slide {
+
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: rgb(26, 33, 41);
+
+        &:nth-of-type(1) {
+            background-color: #2a9d8f;
+
+
+        }
+
+        &:nth-of-type(2) {
+            background-color: #f4a261;
+
+        }
+
+        &:nth-of-type(3) {
+            background-color: #ae73a6;
+            
+
+        }
+
+       img{
+            display: block;
+        }
+
+        
+        
+            .slide__info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                width: 100%;
+
+                //margin: 1rem;
+
+                a{
+                    display: flex;
+        justify-content: center;
+        align-items: center;
+                    font-size: 1.5rem;
+                }
+
+                p{
+                    display: flex;
+        justify-content: center;
+        align-items: center;
+                    font-size: .8rem;
+                }
+
+
+            }
+
+        }
+    }
+
+
+    /* Fin article slide */
+}
+
+/* Fin section carou */

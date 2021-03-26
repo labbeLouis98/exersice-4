@@ -1173,7 +1173,7 @@ body.home::after {
   }
 }
 
-.list-cours .contenu article {
+.list-cours .contenu .article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1183,25 +1183,25 @@ body.home::after {
   /* ------------------------------------------------------------- media query */
 }
 
-.list-cours .contenu article h2 {
+.list-cours .contenu .article h2 {
   display: none;
 }
 
 @media (min-width: 800px) {
-  .list-cours .contenu article {
+  .list-cours .contenu .article {
     justify-content: space-between;
     width: 29%;
     margin: 4%;
   }
 }
 
-.list-cours .contenu article p {
+.list-cours .contenu .article p {
   font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.1rem);
   font-weight: bold;
   color: #1D3557;
 }
 
-.list-cours .contenu article a {
+.list-cours .contenu .article a {
   text-align: center;
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
   font-weight: bold;
@@ -1305,6 +1305,69 @@ div #svg1, div #svg2, div #svg3 {
   }
 }
 
+/* Local/carrousel2
+--------------------------------------------- */
+.carrousel-2 {
+  display: flex;
+  width: 300vw;
+  height: 30vh;
+  transition: transform .5s;
+  /* Fin article slide */
+}
+
+.carrousel-2 .slide__conteneur {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel-2 .slide__conteneur .slide {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1a2129;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(1) {
+  background-color: #2a9d8f;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(2) {
+  background-color: #f4a261;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(3) {
+  background-color: #ae73a6;
+}
+
+.carrousel-2 .slide__conteneur .slide img {
+  display: block;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8rem;
+}
+
+/* Fin section carou */
 /* Local/burger
 --------------------------------------------- */
 .menu-toggle {

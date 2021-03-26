@@ -40,7 +40,36 @@ get_header();
         </div>
     </section>
 
+    <section class="boutons">
+
+
+        <botton id='un'><input type="radio" name="radio" checked></botton>
+
+
+        <div id='deux'><input type="radio" name="radio"></div>
+
+
+        <div id='trois'><input type="radio" name="radio"></div>
+
+
+    </section>
+
     <!-- Fin du carrousel 1-->
+  <!-- debut du carrousel 2-->
+    <section class="carrousel-2">
+
+        <article class="slide__conteneur">
+            <div class="slide">
+                <img src="" alt="">
+                <div class="slide__info">
+                    <p> 582-1W1 - 75h - Web </p>
+                    <a href="http://localhost/4w4/2020/10/07/582-1w1-mise-en-page-web-75h/"> Mise en page Web </a>
+                    <p> Session 1 </p>
+                </div>
+            </div>
+        </article>
+
+    </section>
 
     <section class="boutons">
 
@@ -56,7 +85,9 @@ get_header();
 
     </section>
 
-    <!-- fin du carrousel-->
+
+
+    <!-- fin du carrousel2-->
 
 
     <section class="contenu">
@@ -67,42 +98,24 @@ get_header();
             $precedent = "XXXXXXX";
 			while ( have_posts() ) :
 				the_post();
-                $titre_grand = get_the_title();
-                $session = substr($titre_grand, 4,1);
-                $nbHeure = substr($titre_grand, -4,3);
-                $titre = substr($titre_grand, 8, -6); // ou $titre
-                $sigle = substr($titre_grand,0 , 7);
-                $typeCours = get_field('type_de_cours');
-                
-                if ($precedent =! $typeCours): 
+                convertir_tableau($tPropriete);
+                if ($precedent =! $tPropriete ['typeCours']): 
         
                  if ($precedent != "XXXXXXX"): ?>
     </section>
 
     <?php endif ?>
 
-    
-    <h2><?php echo $typeCours; ?> </h2>
+
+    <h2><?php echo $tPropriete ['typeCours'] ?> </h2>
     <section>
 
         <?php endif ?>
-
-        
-
-
-
-        <article>
-            <p> <?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?> </p>
-            <a href="<?php echo get_permalink(); ?>"> <?php echo $titre; ?> </a>
-            <p> Session <?php echo $session; ?> </p>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path id="articleSvg" fill="#264653" fill-opacity="1"
-                    d="M0,224L48,202.7C96,181,192,139,288,149.3C384,160,480,224,576,240C672,256,768,224,864,224C960,224,1056,256,1152,256C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                </path>
-            </svg>
-        </article>
         <?php
-    $precedent = $typeCours;
+/*-----------------------template content link ---------------------- */
+        get_template_part( 'template-parts/content', 'bloc' );
+    $precedent = $tPropriete ['typeCours'];
+
                  endwhile; ?>
 
     </section>
@@ -117,3 +130,12 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
+
+function convertir_tableau(&$tPropriete){
+    $titre_grand = get_the_title();
+    $tPropriete  ['session'] = substr($titre_grand, 4,1);
+    $tPropriete  ['nbHeure'] = substr($titre_grand, -4,3);
+    $tPropriete  ['titre'] = substr($titre_grand, 8, -6); // ou $titre
+    $tPropriete ['sigle'] = substr($titre_grand,0 , 7);
+    $tPropriete['typeCours'] = get_field('type_de_cours');
+}
