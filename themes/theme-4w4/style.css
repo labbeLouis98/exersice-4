@@ -1218,12 +1218,7 @@ footer {
 
 /* Local/carrousel
 --------------------------------------------- */
-.list-cours {
-  /*-------------Ajout de la section et de la class boutons-----------------*/
-  /*-------------Boutons et radio boutons ---------------------*/
-}
-
-.list-cours .carrousel {
+.carrousel {
   display: flex;
   width: 300vw;
   height: 25vh;
@@ -1231,7 +1226,7 @@ footer {
   justify-content: center;
 }
 
-.list-cours .carrousel div {
+.carrousel div {
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -1240,19 +1235,20 @@ footer {
   color: #1a2129;
 }
 
-.list-cours .carrousel div:nth-of-type(1) {
+.carrousel div:nth-of-type(1) {
   background-color: #2a9d8f;
 }
 
-.list-cours .carrousel div:nth-of-type(2) {
+.carrousel div:nth-of-type(2) {
   background-color: #f4a261;
 }
 
-.list-cours .carrousel div:nth-of-type(3) {
+.carrousel div:nth-of-type(3) {
   background-color: #ae73a6;
 }
 
-.list-cours .boutons {
+/*-------------Ajout de la section et de la class boutons-----------------*/
+.boutons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1260,16 +1256,17 @@ footer {
   background-color: #557a95;
 }
 
-.list-cours .boutons :nth-child(1),
-.list-cours .boutons :nth-child(2),
-.list-cours .boutons :nth-child(3) {
+.boutons :nth-child(1),
+.boutons :nth-child(2),
+.boutons :nth-child(3) {
   margin: 12px;
   font-size: clamp(0.5rem, -0.875rem + 8.333vw, 2rem);
   width: 3rem;
   height: 3rem;
 }
 
-.list-cours #un, .list-cours #deux, .list-cours #trois {
+/*-------------Boutons et radio boutons ---------------------*/
+#un, #deux, #trois {
   background-color: #A8DADC;
   border-radius: 50%;
   width: 3rem;
@@ -1309,7 +1306,7 @@ div #svg1, div #svg2, div #svg3 {
 --------------------------------------------- */
 .carrousel-2 {
   display: flex;
-  width: 300vw;
+  width: 700vw;
   height: 30vh;
   transition: transform .5s;
   justify-content: center;

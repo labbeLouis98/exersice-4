@@ -10,7 +10,7 @@
 get_header();
 ?>
 <!-- ///////////////////////////////////////////////////////// CATEGORY-COURS.PHP -->
-<main id="primary" class="list-cours">
+
 
     <?php if ( have_posts() ) : ?>
 
@@ -55,6 +55,8 @@ get_header();
     </section>
 
     <!-- Fin du carrousel 1-->
+
+
     <!-- debut du carrousel 2-->
     <section class="carrousel-2">
 
@@ -96,6 +98,8 @@ get_header();
 
     </section>
 
+
+
     <section class="ctrl-caroussel-2">
 
 
@@ -114,7 +118,7 @@ get_header();
 
     <!-- fin du carrousel2-->
 
-
+    <main id="primary" class="list-cours">
     <section class="contenu">
 
 
@@ -124,31 +128,56 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
                 convertir_tableau($tPropriete);
-                if ($precedent =! $tPropriete ['typeCours']): 
-        
-                 if ($precedent != "XXXXXXX"): ?>
+                if ($precedent =! $tPropriete ['typeCours']): ?>
+
+        <?php if ($precedent != "XXXXXXX"): ?>
     </section>
+    <?php if ($precedent != "Web"): 
+        $ctrl_radio .= '</section>';
+        echo $ctrl_radio;
+    endif;?>
+
+    
+
+        
 
     <?php endif ?>
-
-
+    
     <h2><?php echo $tPropriete ['typeCours'] ?> </h2>
-    <section>
+    <?php if ($tPropriete ['typeCours'] == "Web"): ?>
+    <section class="carrousel-2">
 
-        <?php endif ?>
-        <?php
+
+        <?php 
+        $ctrl_radio = '<section class="ctrl-caroussel-2">'
+    
+    
+    else: ?>
+        <section>
+
+            <?php endif ?>
+            <?php endif ?>
+            
+            <?php
+
+     if ($tPropriete ['typeCours'] == "Web"):
+        get_template_part( 'template-parts/content', 'carrousel' );
+        $ctrl_radio .= '<botton id=''><input type="radio" name="rad-carrousel"></botton>'
+             else:
+            get_template_part( 'template-parts/content', 'bloc' );
+    
+     endif; 
+        
 /*-----------------------template content link ---------------------- */
-        get_template_part( 'template-parts/content', 'bloc' );
+        
     $precedent = $tPropriete ['typeCours'];
 
                  endwhile; ?>
 
-    </section>
-    <!--Fin section cours -->
+        </section>
+        <!--Fin section cours -->
 
-    <?php
-        endif;
-    ?>
+        <?php endif; ?>
 
 </main> <!-- #main -->
 
