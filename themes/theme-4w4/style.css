@@ -1312,6 +1312,7 @@ div #svg1, div #svg2, div #svg3 {
   width: 300vw;
   height: 30vh;
   transition: transform .5s;
+  justify-content: center;
   /* Fin article slide */
 }
 
@@ -1325,7 +1326,7 @@ div #svg1, div #svg2, div #svg3 {
 .carrousel-2 .slide__conteneur .slide {
   width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: #1a2129;
 }
@@ -1344,6 +1345,7 @@ div #svg1, div #svg2, div #svg3 {
 
 .carrousel-2 .slide__conteneur .slide img {
   display: block;
+  margin: 2%;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info {
@@ -1351,23 +1353,38 @@ div #svg1, div #svg2, div #svg3 {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-left: 0;
+  padding-right: 12%;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2rem);
+  text-decoration: none;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: .8rem;
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.2rem);
 }
 
 /* Fin section carou */
+.ctrl-caroussel-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #557a95;
+}
+
+.ctrl-caroussel-2 input {
+  margin: 2rem;
+}
+
 /* Local/burger
 --------------------------------------------- */
 .menu-toggle {

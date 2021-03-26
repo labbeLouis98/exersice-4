@@ -2,8 +2,8 @@
     display: flex;
     width: 300vw;
     height: 30vh;
-     transition: transform .5s;
-    //justify-content: center;
+    transition: transform .5s;
+    justify-content: center;
 
     .slide__conteneur {
         width: 100vw;
@@ -14,36 +14,30 @@
 
         .slide {
 
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-        color: rgb(26, 33, 41);
+            color: rgb(26, 33, 41);
 
-        &:nth-of-type(1) {
-            background-color: #2a9d8f;
+            &:nth-of-type(1) {
+                background-color: #2a9d8f;
+            }
 
+            &:nth-of-type(2) {
+                background-color: #f4a261;
+            }
 
-        }
+            &:nth-of-type(3) {
+                background-color: #ae73a6;
+            }
 
-        &:nth-of-type(2) {
-            background-color: #f4a261;
+            img {
+                display: block;
+                margin: 2%;
+            }
 
-        }
-
-        &:nth-of-type(3) {
-            background-color: #ae73a6;
-            
-
-        }
-
-       img{
-            display: block;
-        }
-
-        
-        
             .slide__info {
                 display: flex;
                 flex-direction: column;
@@ -51,25 +45,25 @@
 
                 width: 100%;
 
-                //margin: 1rem;
+                //margin: 2%;
+                margin-left: 0;
+                padding-right: 12%;
 
-                a{
+                a {
                     display: flex;
-        justify-content: center;
-        align-items: center;
-                    font-size: 1.5rem;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: clamp(1.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
+                    text-decoration: none;
                 }
 
-                p{
+                p {
                     display: flex;
-        justify-content: center;
-        align-items: center;
-                    font-size: .8rem;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.2rem);
                 }
-
-
             }
-
         }
     }
 
@@ -78,3 +72,15 @@
 }
 
 /* Fin section carou */
+
+.ctrl-caroussel-2{
+    display: flex;
+    justify-content: center;
+        align-items: center;
+        width: 100vw; // largeur fixe de 100vw pour occuper 100% de la page accueil sans deborder dans les 300vw 
+        background-color: #557a95;
+    input{
+        margin: 2rem;
+
+    }
+}
