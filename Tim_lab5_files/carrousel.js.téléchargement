@@ -2,13 +2,11 @@
 
 	/*---------------------les boutons-----------------------*/
 	let bout1 = document.getElementById('un')
-	//console.log(bout1.id)
 
 	let bout2 = document.getElementById('deux')
-	//console.log(bout2.id)
-
+	
 	let bout3 = document.getElementById('trois')
-	//console.log(bout3.id)
+	
 
 	/*---------------------caroussel -----------------------*/
 
@@ -17,9 +15,6 @@
 	/*---------------------les svg et titre -----------------------*/
 
 	
-
-	
-
 	bout1.addEventListener('mousedown', function () {
 		carrousel.style.transform = "translateX(0)";
 		

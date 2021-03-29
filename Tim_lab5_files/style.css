@@ -1156,14 +1156,14 @@ body.home::after {
   width: 100vw;
 }
 
-.list-cours .contenu {
+.list-cours section.bloc {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 @media (min-width: 800px) {
-  .list-cours .contenu {
+  .list-cours section.bloc {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1173,7 +1173,7 @@ body.home::after {
   }
 }
 
-.list-cours .contenu article {
+.list-cours section.bloc .article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1183,25 +1183,25 @@ body.home::after {
   /* ------------------------------------------------------------- media query */
 }
 
-.list-cours .contenu article h2 {
+.list-cours section.bloc .article h2 {
   display: none;
 }
 
 @media (min-width: 800px) {
-  .list-cours .contenu article {
+  .list-cours section.bloc .article {
     justify-content: space-between;
     width: 29%;
     margin: 4%;
   }
 }
 
-.list-cours .contenu article p {
+.list-cours section.bloc .article p {
   font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.1rem);
   font-weight: bold;
   color: #1D3557;
 }
 
-.list-cours .contenu article a {
+.list-cours section.bloc .article a {
   text-align: center;
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
   font-weight: bold;
@@ -1218,12 +1218,7 @@ footer {
 
 /* Local/carrousel
 --------------------------------------------- */
-.list-cours {
-  /*-------------Ajout de la section et de la class boutons-----------------*/
-  /*-------------Boutons et radio boutons ---------------------*/
-}
-
-.list-cours .carrousel {
+.carrousel {
   display: flex;
   width: 300vw;
   height: 25vh;
@@ -1231,7 +1226,7 @@ footer {
   justify-content: center;
 }
 
-.list-cours .carrousel div {
+.carrousel div {
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -1240,19 +1235,20 @@ footer {
   color: #1a2129;
 }
 
-.list-cours .carrousel div:nth-of-type(1) {
+.carrousel div:nth-of-type(1) {
   background-color: #2a9d8f;
 }
 
-.list-cours .carrousel div:nth-of-type(2) {
+.carrousel div:nth-of-type(2) {
   background-color: #f4a261;
 }
 
-.list-cours .carrousel div:nth-of-type(3) {
+.carrousel div:nth-of-type(3) {
   background-color: #ae73a6;
 }
 
-.list-cours .boutons {
+/*-------------Ajout de la section et de la class boutons-----------------*/
+.boutons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1260,16 +1256,17 @@ footer {
   background-color: #557a95;
 }
 
-.list-cours .boutons :nth-child(1),
-.list-cours .boutons :nth-child(2),
-.list-cours .boutons :nth-child(3) {
+.boutons :nth-child(1),
+.boutons :nth-child(2),
+.boutons :nth-child(3) {
   margin: 12px;
   font-size: clamp(0.5rem, -0.875rem + 8.333vw, 2rem);
   width: 3rem;
   height: 3rem;
 }
 
-.list-cours #un, .list-cours #deux, .list-cours #trois {
+/*-------------Boutons et radio boutons ---------------------*/
+#un, #deux, #trois {
   background-color: #A8DADC;
   border-radius: 50%;
   width: 3rem;
@@ -1303,6 +1300,86 @@ div #svg1, div #svg2, div #svg3 {
     width: 10rem;
     height: 10rem;
   }
+}
+
+/* Local/carrousel2
+--------------------------------------------- */
+.carrousel-2 {
+  display: flex;
+  width: 600vw;
+  height: 30vh;
+  transition: transform .5s;
+  justify-content: center;
+  /* Fin article slide */
+}
+
+.carrousel-2 .slide__conteneur {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel-2 .slide__conteneur .slide {
+  border: 1px solid gray;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1a2129;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(1) {
+  background-color: #2a9d8f;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(2) {
+  background-color: #f4a261;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(3) {
+  background-color: #ae73a6;
+}
+
+.carrousel-2 .slide__conteneur .slide img {
+  display: block;
+  margin: 2%;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-left: 0;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2rem);
+  text-decoration: none;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.2rem);
+}
+
+/* Fin section carou */
+.ctrl-carrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #557a95;
+}
+
+.ctrl-carrousel input {
+  margin: 2rem;
 }
 
 /* Local/burger
