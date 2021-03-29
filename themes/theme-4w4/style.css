@@ -1162,8 +1162,14 @@ body.home::after {
   align-items: center;
 }
 
+.list-cours .contenu section.bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: 800px) {
-  .list-cours .contenu {
+  .list-cours .contenu section.bloc {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1173,7 +1179,7 @@ body.home::after {
   }
 }
 
-.list-cours .contenu .article {
+.list-cours .contenu section.bloc .article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1183,25 +1189,25 @@ body.home::after {
   /* ------------------------------------------------------------- media query */
 }
 
-.list-cours .contenu .article h2 {
+.list-cours .contenu section.bloc .article h2 {
   display: none;
 }
 
 @media (min-width: 800px) {
-  .list-cours .contenu .article {
+  .list-cours .contenu section.bloc .article {
     justify-content: space-between;
     width: 29%;
     margin: 4%;
   }
 }
 
-.list-cours .contenu .article p {
+.list-cours .contenu section.bloc .article p {
   font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.1rem);
   font-weight: bold;
   color: #1D3557;
 }
 
-.list-cours .contenu .article a {
+.list-cours .contenu section.bloc .article a {
   text-align: center;
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.4rem);
   font-weight: bold;
@@ -1306,9 +1312,10 @@ div #svg1, div #svg2, div #svg3 {
 --------------------------------------------- */
 .carrousel-2 {
   display: flex;
-  width: 700vw;
+  width: 600vw;
   height: 30vh;
   transition: transform .5s;
+  flex-wrap: nowrap;
   justify-content: center;
   /* Fin article slide */
 }
@@ -1351,7 +1358,6 @@ div #svg1, div #svg2, div #svg3 {
   justify-content: center;
   width: 100%;
   margin-left: 0;
-  padding-right: 12%;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info a {
@@ -1370,7 +1376,7 @@ div #svg1, div #svg2, div #svg3 {
 }
 
 /* Fin section carou */
-.ctrl-caroussel-2 {
+.ctrl-carrousel {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1378,7 +1384,7 @@ div #svg1, div #svg2, div #svg3 {
   background-color: #557a95;
 }
 
-.ctrl-caroussel-2 input {
+.ctrl-carrousel input {
   margin: 2rem;
 }
 

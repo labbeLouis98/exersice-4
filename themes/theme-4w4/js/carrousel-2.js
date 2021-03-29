@@ -1,7 +1,7 @@
 (function () {
 
 	/*---------------------caroussel-2 -----------------------*/
-    let bout = document.querySelectorAll('.ctrl-caroussel-2 input');
+    let bout = document.querySelectorAll('.ctrl-carrousel input');
 	//console.log(bout.length)
 	let carrousel_2 = document.querySelector('.carrousel-2');
 	//console.log(carrousel_2.tagName)

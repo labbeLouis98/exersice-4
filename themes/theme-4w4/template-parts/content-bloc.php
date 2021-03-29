@@ -10,6 +10,7 @@
  global $tPropriete;
 ?>
 
+
 <article class="article">
 
     

@@ -1,8 +1,9 @@
 .carrousel-2 {
     display: flex;
-    width: 700vw;
+    width: 600vw;
     height: 30vh;
     transition: transform .5s;
+    flex-wrap: nowrap;
     justify-content: center;
 
     .slide__conteneur {
@@ -47,7 +48,7 @@
 
                 //margin: 2%;
                 margin-left: 0;
-                padding-right: 12%;
+                //padding-right: 12%;
 
                 a {
                     display: flex;
@@ -73,7 +74,7 @@
 
 /* Fin section carou */
 
-.ctrl-caroussel-2{
+.ctrl-carrousel{
     display: flex;
     justify-content: center;
         align-items: center;
