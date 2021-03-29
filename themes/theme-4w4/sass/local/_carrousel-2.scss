@@ -1,19 +1,22 @@
+
 .carrousel-2 {
     display: flex;
     width: 600vw;
     height: 30vh;
     transition: transform .5s;
-    flex-wrap: nowrap;
+    //flex-wrap: nowrap;
     justify-content: center;
+    
 
     .slide__conteneur {
         width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        
 
         .slide {
+            border: 1px solid gray;
 
             width: 90%;
             display: flex;

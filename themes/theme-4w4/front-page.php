@@ -14,17 +14,19 @@ get_header();
 
 <?php if ( have_posts() ) : ?>
 
-<header class="page-header">
-    <?php
+<main id="primary" class="site-main">
+
+    <header class="page-header">
+        <?php
 				//the_archive_title( '<h1 class="page-title">', '</h1>' ); 
 				//the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-</header><!-- .page-header -->
+    </header><!-- .page-header -->
 
-<!-- debut du carrousel 1-->
+    <!-- debut du carrousel 1-->
 
-    
-<!--section class="carrousel">
+
+    <!--section class="carrousel">
     <div>
         <p>Apprentissage</p>
         <img id="svg1" src="https://s2.svgbox.net/illlustrations.svg?ic=programing&color=000000">
@@ -41,7 +43,7 @@ get_header();
     </div>
 </section-->
 
-<!--section class="boutons">
+    <!--section class="boutons">
 
 
     <botton id='un'><input type="radio" name="radio" checked></botton>
@@ -55,56 +57,59 @@ get_header();
 
 </section-->
 
-<!-- Fin du carrousel 1-->
+    <!-- Fin du carrousel 1-->
 
 
-<!-- debut du carrousel 2-->
+    <!-- debut du carrousel 2-->
 
-<main id="primary" class="list-cours">
-<section class="carrousel-2">
+    <section class="list-cours">
+
+
+    <!--section class="carrousel-2">
 
     
 
-</section>
-
-<section class="ctrl-carrousel">
-
-<input type="radio" name="rad-carrousel">
-
-</section>
+    </section-->
 
 
+    <!--section class="ctrl-carrousel">
+    
+        
 
-<!-- fin du carrousel2-->
+    </section-->
 
-<section class="contenu">
+    
 
+    <!-- fin du carrousel2-->
 
-        <?php
+    
+    <?php
+    $ctrl_radio = "";
 			/* Start the Loop */
             $precedent = "XXXXXXX";
 			while ( have_posts() ) :
 				the_post();
                 convertir_tableau($tPropriete);
-                if ($precedent =! $tPropriete ['typeCours']): ?>
-                <?php if ($precedent != "XXXXXXX"): ?>
-                </section>
-            <?php endif;?>
+                if ($precedent != $tPropriete ['typeCours']): ?>
+    <?php if ($precedent != "XXXXXXX"): ?>
+    
+    </section>
+    <?php endif;?>
 
-            <?php if ($precedent == "Web"): ?>
-                <section class="ctrl-carrousel">
-                <?php echo $ctrl_radio; ?>
-                </section>  
-                <?php endif;?>
-            <h2><?php echo $tPropriete ['typeCours'] ?> </h2> 
-            <section <?php echo ($tPropriete ['typeCours'] == 'Web' ? 'class="carrousel-2"' : 'class="bloc"' ); ?>>
-            
+    <?php if ($precedent == "Web"): ?>
+    <section class="ctrl-carrousel">
+        <?php echo $ctrl_radio; ?>
+    </section>
+    <?php endif;?>
+    <h2><?php echo $tPropriete ['typeCours'] ?> </h2>
+    <section <?php echo ($tPropriete ['typeCours'] == 'Web' ? 'class="carrousel-2"' : 'class="bloc"' ); ?>>
+    
         <?php endif;?>
         <?php 
         if ($tPropriete ['typeCours'] == "Web"):
     
           get_template_part( 'template-parts/content', 'carrousel' );
-          $ctrl_radio = '<input type="radio" name="rad-carrousel">';
+          $ctrl_radio .= '<input type="radio" name="rad-carrousel">';
           
         else:
             get_template_part( 'template-parts/content', 'bloc' );
@@ -114,9 +119,10 @@ get_header();
 
       endwhile; ?>
 
-</section>
+    </section>
+    
 
-<?php endif; ?>
+    <?php endif; ?>
 
 </main> <!-- #main -->
 
