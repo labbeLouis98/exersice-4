@@ -1104,6 +1104,10 @@ menu tablet
 
 /* Local/accueil
 --------------------------------------------- */
+main {
+  width: 100vw;
+}
+
 .site-title {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(2.5rem, -0.875rem + 8.333vw, 5rem);
@@ -1154,6 +1158,7 @@ body.home::after {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  justify-content: center;
 }
 
 .list-cours h2 {
@@ -1185,16 +1190,19 @@ body.home::after {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 90%;
   background-color: #c3e1e2;
+  border: .5rem solid #2a9d8f;
+  margin: 1%;
   /* ------------------------------------------------------------- media query */
 }
 
 @media (min-width: 800px) {
   .list-cours section.bloc .article {
     justify-content: space-between;
-    width: 29%;
-    margin: 4%;
+    width: 30vw;
+    height: 35vh;
+    margin: 5%;
   }
 }
 
