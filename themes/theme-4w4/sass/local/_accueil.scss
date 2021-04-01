@@ -70,14 +70,15 @@ body.home::after {
     flex-direction: column;
     width: 100vw;
     justify-content: center;
-
-    //margin: 0;
+    
 
     h2 {
-        font-size: 2rem;
-        display: none;
+        font-size: 3.2rem;
         display: flex;
         justify-content: center;
+        background-color: #2a9d8f ;
+        color: #F1FAEE;
+        align-items: center;
 
     }
 
@@ -124,7 +125,7 @@ body.home::after {
             }
 
             p {
-                font-size:clamp(0.7rem, #{"-0.875rem + 8.333vw"}, 1.1rem);
+                font-size:clamp(0.7rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
                 font-weight: bold;
                 color: #1D3557;
             }
@@ -132,13 +133,23 @@ body.home::after {
             a {
 
                 text-align: center;
-                font-size:clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.4rem);
+                font-size:clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.8rem);
                 font-weight: bold;
                 text-decoration: none;
                 color: #1D3557;
                 margin: 1rem;
             }
+
+            a:hover{
+                color: #f4a261 ;
+            }
         }
+
+        .article:hover{
+            background-color: #9feaec;
+        }
+
+
 
         //fin article
 
@@ -146,10 +157,11 @@ body.home::after {
 }
 
 
-
-
 /*---------------changement couleur footer----------------------*/
 footer {
     background-color: #f4a261;
     color: #1D3557;
 }
+
+
+

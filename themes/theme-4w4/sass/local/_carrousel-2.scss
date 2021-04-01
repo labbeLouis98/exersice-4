@@ -1,4 +1,3 @@
-
 .carrousel-2 {
     display: flex;
     width: 600vw;
@@ -6,17 +5,21 @@
     transition: transform .5s;
     //flex-wrap: nowrap;
     justify-content: center;
-    
+
 
     .slide__conteneur {
         width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        font-family: $font__main;
+        background-color: #A8DADC ;
+
 
         .slide {
-            border: 1px solid gray;
+            
+            border-radius: 1rem;
+                border: .5rem solid #264653;
 
             width: 90%;
             display: flex;
@@ -29,20 +32,13 @@
                 background-color: #2a9d8f;
             }
 
-            &:nth-of-type(2) {
-                background-color: #f4a261;
-            }
-
-            &:nth-of-type(3) {
-                background-color: #ae73a6;
-            }
-
             img {
-                display: block;
-                margin: 2%;
+                display: none;
+                margin: 5%;
             }
 
             .slide__info {
+                font-weight: bold;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -59,15 +55,21 @@
                     align-items: center;
                     font-size: clamp(1.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
                     text-decoration: none;
+                    
                 }
 
                 p {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.2rem);
+                    font-size: clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.6rem);
+                    
                 }
             }
+        }
+
+        .slide:hover{
+            background-color: #2a9d9093;
         }
     }
 
@@ -77,21 +79,36 @@
 
 /* Fin section carou */
 
-.ctrl-carrousel{
-    display: flex;
-    justify-content: center;
-        align-items: center;
-        width: 100vw; // largeur fixe de 100vw pour occuper 100% de la page accueil sans deborder dans les 300vw 
-        background-color: #557a95;
-    input{
-        margin: 2rem;
-        background-color: #A8DADC;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+.ctrl-carrousel {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw; // largeur fixe de 100vw pour occuper 100% de la page accueil sans deborder dans les 300vw 
+    background-color: #557a95;
 
+    .bout {
+        background-color: #A8DADC;
+        
+        justify-content: space-around;
+        margin: 1rem;
+        align-items: center;
+        border-radius: 50%;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        input {
+            margin: .5rem;
+            background-color: #A8DADC;
+           
+            width: 2rem;
+            height: 2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

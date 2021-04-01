@@ -24,8 +24,6 @@ get_header();
     </header><!-- .page-header -->
 
     <!-- debut du carrousel 1-->
-
-
     <!--section class="carrousel">
     <div>
         <p>Apprentissage</p>
@@ -39,47 +37,22 @@ get_header();
     <div>
         <p>Intégration</p>
         <img id="svg3" src="https://s2.svgbox.net/illlustrations.svg?ic=app-development&color=000000">
-
     </div>
 </section-->
-
     <!--section class="boutons">
-
-
     <botton id='un'><input type="radio" name="radio" checked></botton>
-
-
     <div id='deux'><input type="radio" name="radio"></div>
-
-
     <div id='trois'><input type="radio" name="radio"></div>
-
-
 </section-->
-
     <!-- Fin du carrousel 1-->
-
-
     <!-- debut du carrousel 2-->
 
     <section class="list-cours">
 
-
     <!--section class="carrousel-2">
-
-    
-
     </section-->
-
-
     <!--section class="ctrl-carrousel">
-    
-        
-
     </section-->
-
-    
-
     <!-- fin du carrousel2-->
 
     
@@ -101,7 +74,13 @@ get_header();
         <?php echo $ctrl_radio; ?>
     </section>
     <?php endif;?>
+
+    <?php if ($tPropriete ['typeCours'] != 'Web'): ?>
+        
     <h2><?php echo $tPropriete ['typeCours'] ?> </h2>
+
+    <?php endif;?>
+
     <section <?php echo ($tPropriete ['typeCours'] == 'Web' ? 'class="carrousel-2"' : 'class="bloc"' ); ?>>
     
         <?php endif;?>
@@ -109,7 +88,7 @@ get_header();
         if ($tPropriete ['typeCours'] == "Web"):
     
           get_template_part( 'template-parts/content', 'carrousel' );
-          $ctrl_radio .= '<input type="radio" name="rad-carrousel">';
+          $ctrl_radio .= '<div class="bout"><input class="checkmark" type="radio" name="rad-carrousel"></div>';
           
         else:
             get_template_part( 'template-parts/content', 'bloc' );
