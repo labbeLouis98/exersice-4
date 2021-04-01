@@ -821,7 +821,6 @@ menu tablet
     align-items: center;
     width: 100vw;
     margin: 0;
-    transition: bottom 2s;
     /*-----------------------affichage liste du menu deroulant----------------------*/
   }
   .main-navigation.toggled ul a[href="#"]::after,
@@ -1183,6 +1182,8 @@ body.home::after {
   background-color: #2a9d8f;
   color: #F1FAEE;
   align-items: center;
+  padding: .5rem;
+  height: 6rem;
 }
 
 .list-cours section.bloc {
@@ -1211,20 +1212,24 @@ body.home::after {
   background-color: #c3e1e2;
   border: .5rem solid #2a9d8f;
   margin: 1.1%;
+  /*---------------SVG------------*/
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+  background-size: 15%;
   /* ------------------------------------------------------------- media query */
 }
 
 @media (min-width: 800px) {
   .list-cours section.bloc .article {
     justify-content: space-between;
-    width: 30vw;
-    height: 35vh;
+    width: 35vw;
+    height: 45vh;
     margin: 5%;
   }
 }
 
 .list-cours section.bloc .article p {
-  font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.5rem);
+  font-size: clamp(0.6rem, -0.875rem + 8.333vw, 1.2rem);
   font-weight: bold;
   color: #1D3557;
 }
@@ -1235,7 +1240,7 @@ body.home::after {
   font-weight: bold;
   text-decoration: none;
   color: #1D3557;
-  margin: 1rem;
+  margin: 5%;
 }
 
 .list-cours section.bloc .article a:hover {
@@ -1356,12 +1361,14 @@ div #svg1, div #svg2, div #svg3 {
   align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   background-color: #A8DADC;
+  padding: 1rem;
 }
 
 .carrousel-2 .slide__conteneur .slide {
   border-radius: 1rem;
-  border: .5rem solid #264653;
+  border: .4rem solid #264653;
   width: 90%;
+  height: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1399,10 +1406,6 @@ div #svg1, div #svg2, div #svg3 {
   justify-content: center;
   align-items: center;
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.6rem);
-}
-
-.carrousel-2 .slide__conteneur .slide:hover {
-  background-color: #2a9d9093;
 }
 
 /* Fin section carou */
