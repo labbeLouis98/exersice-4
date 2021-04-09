@@ -1,10 +1,11 @@
 .carrousel-2 {
     display: flex;
     width: 600vw;
-    height: 35vh;
-    transition: transform .5s;
-    //flex-wrap: nowrap;
-    justify-content: center;
+    height: 36vh;
+    transition: transform .4s cubic-bezier(.28, .66, .79, .71);
+    transform: translate(0);
+    flex-wrap: nowrap !important;
+    //justify-content: center;
 
 
     .slide__conteneur {
@@ -15,7 +16,24 @@
         align-items: center;
         font-family: $font__main;
         background-color: #A8DADC;
-        padding: 1rem;
+        padding: .5rem;
+        
+
+        @include tablette {
+            width: 100vw;
+
+            &:nth-child(1) {
+
+                width: 50vw;
+            }
+
+            &:nth-child(2) {
+
+                width: 50vw;
+            }
+
+
+        }
 
         .slide {
 
@@ -27,7 +45,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             color: rgb(26, 33, 41);
 
             &:nth-of-type(1) {
@@ -46,14 +63,16 @@
                 justify-content: center;
                 width: 100%;
                 margin-left: 0;
-                
+                padding: 1%;
+
 
                 a {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: clamp(1.5rem, #{"-0.875rem + 8.333vw"}, 2rem);
+                    font-size: clamp(1.2rem, #{"-0.875rem + 8.333vw"}, 1.6rem);
                     text-decoration: none;
+                    text-align: center;
 
                 }
 
@@ -61,12 +80,16 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: clamp(.8rem, #{"-0.875rem + 8.333vw"}, 1.6rem);
+                    font-size: clamp(.7rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
 
                 }
             }
         }
     }
+
+
+
+
 
 
     /* Fin article slide */
@@ -89,11 +112,6 @@
         align-items: center;
         border-radius: 50%;
 
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-
         input {
             margin: .25rem;
             background-color: #A8DADC;
@@ -104,6 +122,34 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+
+        }
+
+        @include tablette {
+            &:nth-of-type(6) {
+                display: none;
+            }
+
+        }
+
+    }
+
+    @include tablette {
+        #id-Spécifique {
+            &:nth-of-type(5) {
+                display: none;
+
+            }
+        }
+
+        #id-Image\ 2d\/3d {
+            &:nth-of-type(5) {
+                display: none;
+
+            }
         }
     }
+
+
 }

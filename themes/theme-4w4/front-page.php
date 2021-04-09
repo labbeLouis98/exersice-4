@@ -23,39 +23,8 @@ get_header();
 				?>
     </header><!-- .page-header -->
 
-    <!-- debut du carrousel 1-->
-    <!--section class="carrousel">
-    <div>
-        <p>Apprentissage</p>
-        <img id="svg1" src="https://s2.svgbox.net/illlustrations.svg?ic=programing&color=000000">
-
-    </div>
-    <div>
-        <p>Création</p>
-        <img id="svg2" src="https://s2.svgbox.net/illlustrations.svg?ic=wacom-tablet&color=000000">
-    </div>
-    <div>
-        <p>Intégration</p>
-        <img id="svg3" src="https://s2.svgbox.net/illlustrations.svg?ic=app-development&color=000000">
-    </div>
-</section-->
-    <!--section class="boutons">
-    <botton id='un'><input type="radio" name="radio" checked></botton>
-    <div id='deux'><input type="radio" name="radio"></div>
-    <div id='trois'><input type="radio" name="radio"></div>
-</section-->
-    <!-- Fin du carrousel 1-->
-    <!-- debut du carrousel 2-->
-
     <section class="list-cours">
 
-    <!--section class="carrousel-2">
-    </section-->
-    <!--section class="ctrl-carrousel">
-    </section-->
-    <!-- fin du carrousel2-->
-
-    
     <?php
     $ctrl_radio = "";
 			/* Start the Loop */
@@ -69,9 +38,11 @@ get_header();
     </section>
     <?php endif;?>
 
-    <?php if (in_array ($precedent, ['Web','Jeu'])): ?>
+    <?php if (in_array ($precedent, ['Web','Jeu','Spécifique','Image 2d/3d'])): ?>
     <section class="ctrl-carrousel">
-        <?php echo $ctrl_radio; ?>
+        <?php echo $ctrl_radio;
+        $ctrl_radio = "";
+        ?>
     </section>
     <?php endif;?>
 
@@ -81,22 +52,25 @@ get_header();
 
     <?php endif;?>
 
-    <section <?php echo (in_array ($tPropriete ['typeCours'], ['Web','Jeu']) ? 'class="carrousel-2"' : 'class="bloc"' ); ?>>
+    <section <?php echo (in_array ($tPropriete ['typeCours'], ['Web','Jeu','Spécifique','Image 2d/3d']) ? 'class="carrousel-2"' : 'class="bloc"' ); ?>>
     
         <?php endif;?>
         <?php 
-        if (in_array ($tPropriete ['typeCours'], ['Web','Jeu'])):
+        if (in_array ($tPropriete ['typeCours'], ['Web','Jeu','Spécifique','Image 2d/3d'])):
     
           get_template_part( 'template-parts/content', 'carrousel' );
-          $ctrl_radio .= '<div class="bout"><input class="checkmark" type="radio" name="rad-carrousel"></div>';
+          $ctrl_radio .= '<div id="id-'.$tPropriete ['typeCours'].'" class="bout"><input class="checkmark" type="radio" name="rad-'.$tPropriete ['typeCours'].'"></div>';
           
         else:
             get_template_part( 'template-parts/content', 'bloc' );
     
       endif; 
+
+      
      $precedent = $tPropriete ['typeCours'];
 
       endwhile; ?>
+
 
     </section>
     
@@ -113,7 +87,7 @@ function convertir_tableau(&$tPropriete){
     $titre_grand = get_the_title();
     $tPropriete  ['session'] = substr($titre_grand, 4,1);
     $tPropriete  ['nbHeure'] = substr($titre_grand, -4,3);
-    $tPropriete  ['titre'] = substr($titre_grand, 8, -6); // ou $titre
+    $tPropriete  ['titre'] = substr($titre_grand, 8, -6); 
     $tPropriete ['sigle'] = substr($titre_grand,0 , 7);
     $tPropriete['typeCours'] = get_field('type_de_cours');
 }

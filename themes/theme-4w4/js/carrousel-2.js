@@ -7,7 +7,7 @@
 	{
 
     let bout = ctrlCarrousel[noCtrlCarrousel].querySelectorAll('input');
-	noCtrlCarrousel = noCtrlCarrousel + 1;
+	noCtrlCarrousel = noCtrlCarrousel +1;
 	
 	
 	let noBouton = 0;
@@ -16,7 +16,7 @@
 		bt.value = noBouton++;
 		bt.addEventListener('mousedown', function (){
 			elmCarrou.style.transform = "translateX(" + (-this.value*100) + "vw)"
-			//console.log(carrousel_2.style.transform)
+			
 		})
 	}
 
