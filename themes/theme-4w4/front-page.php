@@ -81,11 +81,11 @@ get_header();
 
     <?php endif;?>
 
-    <section <?php echo ($tPropriete ['typeCours'] == 'Web' ? 'class="carrousel-2"' : 'class="bloc"' ); ?>>
+    <section <?php echo (in_array ($tPropriete ['typeCours'], ['Web','Jeu']) ? 'class="carrousel-2"' : 'class="bloc"' ); ?>>
     
         <?php endif;?>
         <?php 
-        if ($tPropriete ['typeCours'] == "Web"):
+        if (in_array ($tPropriete ['typeCours'], ['Web','Jeu'])):
     
           get_template_part( 'template-parts/content', 'carrousel' );
           $ctrl_radio .= '<div class="bout"><input class="checkmark" type="radio" name="rad-carrousel"></div>';

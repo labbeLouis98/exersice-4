@@ -1348,7 +1348,7 @@ div #svg1, div #svg2, div #svg3 {
 .carrousel-2 {
   display: flex;
   width: 600vw;
-  height: 30vh;
+  height: 35vh;
   transition: transform .5s;
   justify-content: center;
   /* Fin article slide */
@@ -1356,6 +1356,7 @@ div #svg1, div #svg2, div #svg3 {
 
 .carrousel-2 .slide__conteneur {
   width: 100vw;
+  min-height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1420,17 +1421,17 @@ div #svg1, div #svg2, div #svg3 {
 .ctrl-carrousel .bout {
   background-color: #A8DADC;
   justify-content: space-around;
-  margin: 1rem;
+  margin: .5rem;
   align-items: center;
   border-radius: 50%;
   user-select: none;
 }
 
 .ctrl-carrousel .bout input {
-  margin: .5rem;
+  margin: .25rem;
   background-color: #A8DADC;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

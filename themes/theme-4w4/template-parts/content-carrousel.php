@@ -22,18 +22,3 @@
 		
 	</div>
 </article>
-
-
-<!--div>
-        <p>Apprentissage</p>
-        <img id="svg1" src="https://s2.svgbox.net/illlustrations.svg?ic=programing&color=000000">
-
-    </div>
-    <div>
-        <p>Création</p>
-        <img id="svg2" src="https://s2.svgbox.net/illlustrations.svg?ic=wacom-tablet&color=000000">
-    </div>
-    <div>
-        <p>Intégration</p>
-        <img id="svg3" src="https://s2.svgbox.net/illlustrations.svg?ic=app-development&color=000000">
-    </div-->
