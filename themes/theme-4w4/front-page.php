@@ -69,7 +69,7 @@ get_header();
     </section>
     <?php endif;?>
 
-    <?php if ($precedent == "Web"): ?>
+    <?php if (in_array ($precedent, ['Web','Jeu'])): ?>
     <section class="ctrl-carrousel">
         <?php echo $ctrl_radio; ?>
     </section>
