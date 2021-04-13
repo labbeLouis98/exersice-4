@@ -1122,21 +1122,47 @@ main {
   width: 100vw;
 }
 
-.site-title {
+header {
+  display: block;
+  width: 100vw;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+}
+
+header div .site-title {
+  display: flex;
+  justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-size: clamp(2.5rem, -0.875rem + 8.333vw, 5rem);
   margin-bottom: 0;
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
+  padding: 0;
   animation: animTitre 2.5s both;
   transition: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
-.site-title a {
+header div .site-title a {
   text-decoration: none;
 }
 
+header div .site-description {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2rem);
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*
+*/
 @keyframes animTitre {
   0% {
     transform: translateY(-100px);
@@ -1604,5 +1630,52 @@ Animation de la deuxime barre bar3
 
 .fermeX3 {
   animation: fermeX3 0.2s both;
+}
+
+/* Local/galerie
+--------------------------------------------- */
+main {
+  flex-direction: column;
+}
+
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galerie a {
+  display: block;
+  width: 150px;
+}
+
+.galerie img {
+  display: block;
+  width: 150px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.page-header .page-title {
+  display: flex;
+  justify-content: center;
+}
+
+.page-header .archive-description {
+  display: flex;
+  justify-content: center;
+}
+
+.page-header .archive-description p {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

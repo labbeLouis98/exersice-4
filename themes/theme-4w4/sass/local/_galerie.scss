@@ -1,0 +1,46 @@
+main {
+    flex-direction: column;
+}
+
+.galerie {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+        display: block;
+        width: 150px;
+    }
+
+    img {
+        display: block;
+        width: 150px;
+        //height: 150px;
+
+    }
+}
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    flex-direction: column;
+    font-family: $font__title;
+    margin: 0;      
+    .page-title {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .archive-description {
+        display: flex;
+        justify-content: center;
+        p{
+            display: flex;
+        justify-content: center;
+        margin: 1rem;
+        }
+    }
+}
