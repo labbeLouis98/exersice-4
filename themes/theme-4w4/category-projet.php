@@ -29,9 +29,10 @@ get_header();
 			while ( have_posts() ) :
 				the_post();?>
 
-				<div>
-                <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail('thumbnail');?></a>
-               </div>
+            <?php get_template_part( 'template-parts/content', 'galerie' ); ?>
+
+  
+  
 			   <?php endwhile; ?>
 
     </section>

@@ -1161,8 +1161,6 @@ header div .site-description {
   margin-right: 0;
 }
 
-/*
-*/
 @keyframes animTitre {
   0% {
     transform: translateY(-100px);
@@ -1641,7 +1639,7 @@ main {
 .galerie {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .galerie a {
