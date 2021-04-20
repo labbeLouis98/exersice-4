@@ -1,5 +1,5 @@
 
-Lab7-TIM 
+Ex3-TIM 
 Louis-Nicolas Labbé
 Mardi gr-1
 Site web word press 
