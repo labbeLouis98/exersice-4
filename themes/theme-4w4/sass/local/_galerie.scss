@@ -1,13 +1,18 @@
 main {
     flex-direction: column;
+    background-color: #F1FAEE;
 }
 
 .galerie {
-
+/* conteneur section */
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap:wrap ;
     justify-content: space-around;
+    margin: 1rem;
+    background-color: #c3e1e2;
 
+    /*
     a {
         display: block;
         width: 150px;
@@ -19,8 +24,71 @@ main {
         //height: 150px;
 
     }
+    */
+/*--------------------------------------------Flip Card-------------------------------*/
+    .flip-card {
+        background-color: transparent;
+        width: 150px;
+        height: 150px;
+        perspective: 1000px;
+        margin: .5rem;
+        border: .5rem solid #f4a261;
+        
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgb(3, 7, 17);
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      
+      .flip-card-front {
+        background-color: #F1FAEE;
+        color: rgb(3, 7, 17);
+      }
+      
+      .flip-card-back {
+        background-color: #2a9d8f;
+        color: #F1FAEE;
+        transform: rotateY(180deg);
+        justify-content: center;
+        align-items: center;
+        font-size: .3rem;
+        margin: 0;
+
+        /*--------------------------Element deriere la carte  Info-------------------*/
+
+        h1{
+            transform: rotate(45deg);
+    
+            
+        }
+  
+        p{
+          font-size: 1rem;
+        }
+      }
+
+      
 }
 
+/*-----------------------Titre de page--------------------------*/
 .page-header {
     display: flex;
     justify-content: center;

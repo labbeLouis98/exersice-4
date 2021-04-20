@@ -90,4 +90,5 @@ function convertir_tableau(&$tPropriete){
     $tPropriete  ['titre'] = substr($titre_grand, 8, -6); 
     $tPropriete ['sigle'] = substr($titre_grand,0 , 7);
     $tPropriete['typeCours'] = get_field('type_de_cours');
+    
 }
